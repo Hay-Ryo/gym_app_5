@@ -1,0 +1,2 @@
+document.getElementById('task-<%= @task.id %>').innerHTML = '<%= j(render 'like', task: @task) %>';
+document.getElementById('task-complete').innerHTML = '<%= j(render 'status',tasks_count: @tasks_count, complete: @complete, uncomplete: @uncomplete) %>';

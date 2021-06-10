@@ -1,0 +1,42 @@
+<footer class="" id="footer" id="bottom" onmouseover="over(this)">
+  <%= form_with model: @message, local: false do |f| %>
+  <div class="form-group">
+    <!-- ここは自動的に message_content というidが付きます。アンダーバーなので注意！ -->
+    <%= f.text_area :content, class: 'form-control', rows: '1', maxlength: '500' %>
+  </div>
+  <div class="form-group">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        フォトを追加
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <%= f.label :フォト選んでください , class: "pl-3"%><br />
+        <%= f.file_field :img, id: "img_name", class: "pl-3" %>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="form-group">
+    <%= f.submit '送信', class: 'btn btn-primary btn-block', id: 'message-button' %>
+  </div>
+  <% end %>
+  </div>
+
+  <% if flash[:alert] %>
+  <div class="flash alert alert-secondary">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+</footer>
+
+<script>
+  let scrollBottom = document.getElementById('bottom');
+  var element = document.documentElement;
+
+  function over() {
+    var bottom = element.scrollHeight - element.clientHeight;
+    window.scroll(0, bottom);
+  }
+</script>

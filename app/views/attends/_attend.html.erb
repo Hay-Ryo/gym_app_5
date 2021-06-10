@@ -1,0 +1,33 @@
+    <% if @month_counts >= 20 %>
+    <div class="attend-perfect">
+      <h3>Perfect!!</h3>
+    </div>
+    <h4 style="color:<%=current_user.color%>">今月<%=@month_counts%>回</h4>
+    <h4 style="color:<%=current_user.color%>">今年<%=@year_counts%>回</h4>
+    <%elsif @month_counts >= 15 %>
+    <div class="attend-excellent">
+      <h3>Excellent！</h3>
+    </div>
+    <h4>今月<%=@month_counts%>回</h4>
+    <h4>今年<%=@year_counts%>回</h4>
+    <%elsif @month_counts >= 10 %>
+    <div class="attend-great">
+      <h3>Great！</h3>
+    </div>
+    <h4>今月<%=@month_counts%>回</h4>
+    <h4>今年<%=@year_counts%>回</h4>
+    <%elsif @month_counts >= 5%>
+    <h3>Good！</h3>
+    <h4>今月<%=@month_counts%>回</h4>
+    <h4>今年<%=@year_counts%>回</h4>
+    <%elsif @month_counts == 1%>
+    <h6>今月の目標を考えよう</h6>
+    <h4>今月<%=@month_counts%>回</h4>
+    <h4>今年<%=@year_counts%>回</h4>
+    <%else%>
+    <strong>
+      <h3>いいね!</h3>
+    </strong>
+    <h4>今月<%=@month_counts%>回</h4>
+    <h4>今年<%=@year_counts%>回</h4>
+    <%end%>

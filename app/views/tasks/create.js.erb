@@ -1,0 +1,5 @@
+$("textarea").val("");
+$("input").val("");
+$('#exampleModal').modal('hide')
+$('.tasks').html("<%= escape_javascript(render 'task', task: @task) %>");
+document.getElementById('task-complete').innerHTML = '<%= j(render 'likes/status', tasks_count: @tasks_count, complete: @complete, uncomplete: @uncomplete) %>';

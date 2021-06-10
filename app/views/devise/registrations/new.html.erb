@@ -1,0 +1,50 @@
+<div class="signup-wrapper">
+  <h2>ユーザー登録</h2>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :名前 %><br />
+    <%= f.text_field :user_name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field new-color">
+    <%= f.label :カラー %><br />
+    <input type="color" id="color-select1"><br />
+    <%= f.text_field :color, id: 'hsvflat',autofocus: true, autocomplete: "color",id: "color1" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :メール %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワード %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> 文字以上)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
+  <% end %>
+</div>
+
+<script>
+// apprication.jsに「document.addEventListener('turbolinks:load', () => 」を追加して書いても動作はするが、consoleエラーが発生する。
+function func1() {
+  var input_message = document.getElementById("color-select1").value;
+  document.getElementById("color1").value= input_message;
+}
+document.getElementById("color-select1").onchange = func1;
+
+</script>

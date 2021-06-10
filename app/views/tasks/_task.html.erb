@@ -1,0 +1,10 @@
+<div class="w-100 mb-3 pb-1 tasks task-text">
+    <% @tasks.each do |task| %>
+    <%if task.user_id == current_user.id%>
+    <div class="card mb-1">
+      <%= render 'likes/like' , task: task %>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>

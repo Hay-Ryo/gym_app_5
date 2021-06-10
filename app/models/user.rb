@@ -1,0 +1,22 @@
+class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+  has_many :messages, dependent: :destroy
+  has_many :attends, dependent: :destroy
+  has_many :tasks, dependent: :destroy
+  has_many :schedules, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  
+  validates :user_name, presence: true, length: { maximum: 15, minimum: 2 }
+  validates :user_name, uniqueness: true
+  validates :email, uniqueness: true
+
+  mount_uploader :img, ImgUploader
+  
+  def liked_by?(task_id)
+    likes.where(task_id: task_id).exists?
+  end
+
+
+end

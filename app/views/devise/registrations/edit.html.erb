@@ -1,0 +1,82 @@
+<div class="user-edit-wrapper" style="background-color:<%= current_user.color%>">
+  <div class="user-image">
+    <img src="<%= current_user.img %>">
+  </div>
+  <h2><%= current_user.user_name.to_s.humanize %> <br>
+  <span>編集画面</span></h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :プロフィール画像 %><br />
+    <label for="image">
+    <span class="button">画像を選択</span><%= f.file_field :img, id: "image" %>
+</label>
+<div id="img-name"></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :ユーザーカラー %><br />
+    <input type="color" id="color-select2">
+    <%= f.text_field :color,autofocus: true, autocomplete: "color",id: "color2" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :password %> <i>(変更する場合は入力
+      )</i><br />
+    <% if @minimum_password_length %>
+
+    <em><%= @minimum_password_length %>文字以上</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_password %> <i>(入力して更新して下さい)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "更新する" %>
+  </div>
+  <% end %>
+
+  <h4 class="mt-3">アカウント削除</h4>
+
+  <p>削除しますか？
+    <%= button_to "アカウント削除する", registration_path(resource_name), data: { confirm: "Are you sure? 本当に消去しますか？" }, method: :delete %>
+  </p>
+</div>
+<%= link_to "前ページへ", :back %>
+
+<script>
+$(function () {
+  $('#image').on("change", function () {
+    let img = this.files[0];
+    const imgName = document.getElementById("img-name");
+    if (img != null) {
+      imgName.insertAdjacentHTML('afterbegin', img.name);
+    }
+  });
+});
+  // apprication.jsに「document.addEventListener('turbolinks:load', () => 」を追加して書いても動作はするが、consoleエラーが発生する。
+  function func2() {
+    var input_mes = document.getElementById("color-select2").value;
+    document.getElementById("color2").value = input_mes;
+  }
+  document.getElementById("color-select2").onchange = func2;
+</script>

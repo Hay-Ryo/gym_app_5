@@ -1,0 +1,21 @@
+<div class="task-wrapper pb-1">
+  <div class="task-container col-12 ">
+    <div class="card mb-1 status-container" id="task-complete">
+      <%= render 'likes/status', tasks_count: @tasks_count, complete: @complete, uncomplete: @uncomplete %>
+    </div>
+    <div class="w-100 mb-3 tasks ">
+      <% @tasks.each do |task| %>
+      <%if task.user_id == current_user.id%>
+      <div class="card mb-1 task-text">
+        <%= render 'likes/like', task: task %>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+    <button type="button" class=" btn-position btn btn-primary " data-toggle="modal" data-target="#exampleModal">
+      <p class="add-btn">+</p>
+    </button>
+<!-- Modal -->
+<%= render 'modal' %>

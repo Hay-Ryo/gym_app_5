@@ -1,0 +1,7 @@
+<% @attends.each do |attend|%>
+<div class="card-header ">
+  <h5>
+    <%= link_to attend.created_at.strftime('%Y/%m/%d %H:%M:%S'),"/attends/#{attend.id}",method: :delete, data: { confirm: "この出席を削除しますか？" } %>
+  </h5>
+</div>
+<%end%>
