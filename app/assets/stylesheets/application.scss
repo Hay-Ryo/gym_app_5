@@ -18,31 +18,87 @@
   @import "font-awesome-sprockets";
   @import "font-awesome";
 
-  .user-img img{
-    max-width: 48px;
-    height: 48px;
-    padding: 0px;
-    margin: 10px 10px;
-    border-radius:9999px;
-    object-position: 50% 50%;
-    overflow: hidden;
+  
+  
+  // トップページ
+  .main-menu{
+    padding:5px;
   }
-  .user-image img{
-    max-width: 10rem;
-    height: 10rem;
-    padding: 0px;
-    margin: 10px 10px;
-    border-radius:9999px;
-    object-position: 50% 50%;
-    overflow: hidden;
+  
+.users-index h2{
+  font-weight: bold;
+}
+
+.card-group{
+  display:flex;
+  width: 100%;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.card-group > .card {
+  margin: 2px;
+  width: 48%;
+}
+
+.card-group > .card a{
+  display:flex;
+  flex-direction: column;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #50ABA2;
+  text-decoration: none;
+}
+
+.home{
+  margin-right: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.fa-home{
+  color: #ffffff;
+}
+
+.icon-size{
+  font-size: 50px;
+  color: #50ABA2;
+}
+
+.main-menu >.card-group > li:hover {
+  background-color: #50ABA2;
+  transition: all 0.3s;
+  transform: translate(0, -5px);
+  .icon-size{
+    color: #ffffff;
   }
+}
+
+.main-menu >.card-group > li :hover {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 576px){
+  .card-group > .card:not(:last-child) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
 
 .img-button > input{
   margin-left: 25%;
 }
+
 #image { 
   display: none;
 }
+
 .button {
   display: block;
   width: 100px;
@@ -53,97 +109,53 @@
   border: 1px solid black;
 }
 
-
-.msg-own{
-  display:flex;
-}
-.msg-other{
-  display:flex;
-}
-
-.main-menu{
-  padding:5px;
-}
-.users-index h2{
-  font-weight: bold;
-}
-.card-group{
-  width: 100%;
-  display:flex;
-  flex-wrap: wrap;
-  list-style: none;
+// ヘッダー
+.sticky-top{
+  max-width: 768px;
   margin: 0 auto;
-  padding: 0;
-}
-.card-group > .card {
-  margin: 2px;
-  width: 48%;
-}
-.card-group > .card a{
-  display:flex;
-  flex-direction: column;
-  margin: 5px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #50ABA2;
-  text-decoration: none;
-}
-.icon-size{
-  font-size: 50px;
-  color: #50ABA2;
-}
-.main-menu >.card-group > li:hover {
   background-color: #50ABA2;
-  // border-color: #2780e6 ;
-  // border-width: 3px;
-  transition: all 0.3s;
-  transform: translate(0, -5px);
-  .icon-size{
-    color: #ffffff;
-  }
-}
-.main-menu >.card-group > li :hover {
-    color: #ffffff;
-}
-@media screen and (min-width: 576px){
-.card-group > .card:not(:last-child) {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
 }
 
-.task-btn{
-  text-align: right;
+// ヘッダーボタン
+.navbar-light .navbar-toggler{
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 255, 255, 0.411);
 }
+
 // フラッシュメッセージ
 .alert-success{
   max-width: 768px;
   margin: 0 auto;
 }
+
 .alert{
   text-align: center;
 }
+
 .alert-secondary{
   max-width: 768px;
   margin: 0 auto;
 }
+
 // メッセージ投稿フォーム
 footer {
   position: fixed;
-  bottom:-30px;
+  bottom:-20px;
   width: 100%;
   max-width: 768px;
   padding: 0.5rem;
   background-color: white;
   margin-bottom: 1rem;
 }
-
-.message a{
-  color: rgb(10, 10, 10);
-  text-decoration: none;
+.dropdown-menu{
+  max-width: 90%;
 }
+.form-group {
+  margin-bottom: 0.3rem;
+}
+
+// チャット
+// メッセージ一覧
 .message{
   padding: 10px 15px 10px;
   border-top-width: 0px;
@@ -155,17 +167,23 @@ footer {
   background-color: #ffffff;
 }
 
-// チャット
-// メッセージ一覧
+.message a{
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+}
 .message-wrapper{
   max-width: 768px;
   margin: 0 auto;
 }
+
 #message-container {
   max-width: 768px;
-  margin: 0 auto;
-  padding: 1rem 1rem 11rem 1rem;
+  padding: 1rem 1rem 9rem 1rem;
   background-color: #50ABA2;
+}
+
+.msg-own{
+  display:flex;
 }
 
 .msg-own h5{
@@ -178,86 +196,102 @@ footer {
   font-size: 15px;
 }
 
-
-// コピー
 .msg-other {
-  max-width: 80%;
+  display:flex;
   margin: 0px 0;
   text-align: left;
-  // border-width: 3px;
-  // border-color: #EBEEF0;
 }
+
 .msg-info{
   font-size: 11px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
 .msg-info p{
   margin-bottom: 3px;
-  padding-bottom: 0;
+  padding-right: 2px;
 }
+
 .msg-text{
   max-width: 100%;
+  position: relative;
   padding: 7px 11px 8px;
   border-radius: 8px;
-  position: relative;
   word-wrap: break-word;
   word-break: break-all;
 }
+
 .msg-text p{
   font-size: 14px;
   margin: 0 10px 0 0;
 }
+
+.msg-img{
+  width:100%;
+}
 .msg-inner{
-  width: auto;
   max-width: 60%;
+  width: auto;
   padding: 7px 11px 8px;
   border-radius: 8px;
   position: relative;
 }
-.message-inner{
+
+.msg-container{
   border-radius: 10px;
 }
 
 .others p {
+  max-width: 250px;
   font-size: 7px;
   display: inline;
   position: relative;
   margin: 0 10px 0 0;
   padding: 10px;
-  max-width: 250px;
 }
 
 .others-message{
   text-align: left;
-  }
+}
+
 .others-message p{
-  // display: inline-block;
+  max-width: 250px;
   position: relative;
   margin: 0 10px 0 0;
   padding: 8px;
-  max-width: 250px;
   border-radius: 12px;
   font-size: 15px;
-  // background: #edf1ee;
-  }
+}
 
 .msg-info img {
   border-radius: 30px;
+  width: 95%;
 }
 
-// ヘッダー
-.sticky-top{
-  background-color: #50ABA2;
+#img_name{
+  font-size: revert;
 }
-.sticky-top{
-  max-width: 768px;
-  margin: 0 auto;
+
+// ユーザーの画像
+.user-img img{
+  max-width: 48px;
+  height: 48px;
+  padding: 0px;
+  margin: 10px 10px;
+  border-radius:999px;
+  object-position: 50% 50%;
+  overflow: hidden;
 }
-// ヘッダーボタン
-.navbar-light .navbar-toggler{
-  border-color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 255, 255, 0.411);
+
+.user-image img{
+  max-width: 10rem;
+  height: 10rem;
+  padding: 0px;
+  margin: 10px 10px;
+  border-radius:999px;
+  object-position: 50% 50%;
+  overflow: hidden;
 }
 
 // ログイン
@@ -321,6 +355,7 @@ footer {
   max-width: 768px;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 10px;
   padding: 15px 5px;
   border-radius: 10px;
   text-align: center;
@@ -379,19 +414,24 @@ input[type="color"] {
   width: 3rem;
 }
 
-// 出席表
+//attend 出席表 
 .attend-wrapper{
   max-width: 768px;
   width: 90%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  box-shadow: 0px 2px 10px #c1ced7;
   border-radius: 10px;
 }
+
+.attend-wrapper p{
+  margin-bottom: 0.5rem;
+}
+
 .attend-wrapper span{
   font-size: 20px;
 }
+
 .attend-wrapper h1{
   font-weight: bold;
   font-size: 2.5rem;
@@ -400,14 +440,15 @@ input[type="color"] {
 .attend-top{
   max-width: 768px;
   width: 90%;
-  text-align: center;
   margin: 0 auto;
   padding: 20px 20px;
+  text-align: center;
   background-color: #ffffff;
   border-radius: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  box-shadow: 0px 2px 10px #c1ced7;
+  box-shadow: 0px 2px 2px #c1ced7;
 }
+
 .attend-top h5 {
   margin-bottom: 0;
   font-weight: 900;
@@ -419,9 +460,11 @@ input[type="color"] {
   margin: 10px auto;
   text-align: center;
 }
+
 .attend-container h5{
   margin-bottom: 0;
 }
+
 .attend-container h3{
   box-shadow: 0 1px 6px #c1ced7;
   border-radius: 10px;
@@ -429,10 +472,31 @@ input[type="color"] {
   opacity:0.9;
   color: gold;
 }
+
+.attend-more{
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.attend-name a{
+  width: 100%;
+  display: block;
+  font-size: 10px;
+  padding: 1px;
+  border-radius: 3px;
+  color:rgb(67, 70, 67);
+  background-color: rgb(152, 243, 205);
+}
+.attend-name {
+  margin-bottom: 2px;
+  text-align: center;
+}
+
 // 出席アニメーション
 .attend-perfect{
   animation: perfect 3s ease 0s 1 alternate none running;
 }
+
 @keyframes perfect {
   0% {
     transform: scale(.3);
@@ -492,6 +556,7 @@ input[type="color"] {
     width:100%;
   }
 }
+
 .attend-container h6{
   box-shadow: 0 1px 6px #c1ced7;
   border-radius: 10px;
@@ -500,14 +565,17 @@ input[type="color"] {
   color: white;
   background-color: #505050;
 }
+
 // スケジュール
 // カレンダー
 .wday-0{
   background-color:rgb(247,208,208)
 }
+
 .wday-6{
   background-color: rgb(213,233,253)
 }
+
 .calendar-heading{
   max-width: 768px;
   font-weight: 500;
@@ -515,13 +583,16 @@ input[type="color"] {
   margin-top: 10px;
   text-align: center;
 }
+
 .calendar-title{
   font-size: 24px;
   margin: 10px;
 }
+
 .calendar-heading a{
   font-size: 12px;
 }
+
 .schedule{
   max-width: 768px;
   width: 90%;
@@ -529,17 +600,20 @@ input[type="color"] {
   text-align: center;
   box-shadow: 0px 2px 10px #c1ced7;
 }
+
 .schedule-wrapper{
   max-width: 768px;
   margin: 0 auto;
   padding-left: 10px;
   box-shadow: 0px 2px 10px #c1ced7;
 }
+
 .schedule-header{
   max-width: 768px;
   width: 90%;
   margin: 0 auto;
 }
+
 .schedule-form{
   max-width: 768px;
   margin: 0 auto;
@@ -552,9 +626,9 @@ input[type="color"] {
   display: block;
   font-size: 10px;
   padding: 1px;
+  border-radius: 3px;
   color:rgb(67, 70, 67);
   background-color: rgb(152, 243, 205);
-  border-radius: 3px;
 }
 .schedule-title {
   margin-bottom: 2px;
@@ -572,19 +646,20 @@ input[type="color"] {
   font-weight: 700;
 }
 .schedule-edit input{
-  padding-top: 15px;
   margin: 0 auto;
+  padding-top: 15px;
   font-weight: 100;
 }
 
 .schedule-edit textarea{
   width: 100%;
   height: 100px;
-  resize: none;
   margin: 0 auto;
   padding: 5px;
   border-radius: 12px;
+  resize: none;
 }
+
 .schedule-edit input[type="submit"]{
   width: 30%;
   margin: 0 auto;
@@ -594,6 +669,7 @@ input[type="color"] {
   color: white;
   background-color: rgb(3, 122, 251);
 }
+
 .schedule-btn{
   text-align: right;
 }
@@ -616,37 +692,45 @@ input[type="color"] {
   max-width: 768px;
   margin: 0 auto;
 }
+
 .task-container{
   margin-top: 5px;
   margin-bottom: 65px;
 }
+
 .task-container .card-body{
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
-// .card-body{
-//   padding: 0.5rem;
-// }
+
+.task-btn{
+  text-align: right;
+}
+
 .lead {
   font-size: 1.25rem;
   font-weight: bold;
 }
+
 .task-text{
   font-size: 0.9rem;
 }
+
 .add-btn{
   line-height: 3rem;
 }
+
 .btn-position{
   position: fixed;
   width: 4rem;
   height: 4rem;
   right: 0.9rem;
   bottom: 0;
-  border-radius: 50%;
   z-index: 1000;
   font-size: 2.25rem;
+  border-radius: 50%;
 }
+
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.01rem 0.4rem;
 }
@@ -661,24 +745,19 @@ input[type="color"] {
   }
 }
 
-// firefox用
-// @-moz-document url-prefix() {
-//   /* ここに書く */
-//   .btn-position {
-//     position: fixed;
-//   }
-// } 
 .status-container{
   width: 100%;
-  text-align: center;
   margin: 0 auto;
   background-color: rgb(214, 247, 236);
+  text-align: center;
 }
+
 .status-container p{
   margin-bottom: 0;
   font-weight: bold;
   color:rgb(4, 138, 138);
 }
+
 .task-complete {
   color: #a5a5a5;
   background-color: #dee4ea;

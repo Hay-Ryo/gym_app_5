@@ -3,11 +3,11 @@ class Message < ApplicationRecord
 
   validates :content, presence: true,unless: :is_present?
 
+  mount_uploader :img, ImgUploader
+  
   def is_present?
     self.img.present?
   end
-  
-  mount_uploader :img, ImgUploader
 
 # partial内でユーザーの分別ができないため変更↓↓
   def template

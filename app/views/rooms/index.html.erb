@@ -1,74 +1,73 @@
 <div class="users-index">
   <h4>ようこそ</h4>
   <% if current_user.user_name == nil %>
-  <h2>ユーザー</h2>
+    <h2>ユーザー</h2>
   <%else%>
-  <h2 style="color:<%=current_user.color%>"><%=@user.user_name%><br>
-  <span>さん</span></h2>
+    <h2 style="color:<%=current_user.color%>"><%=@user.user_name%><br>
+    </h2><span>さん</span>
   <%end%>
   <div class="main-menu">
     <ul class="card-group">
       <li class="card">
-        <%= link_to(attends_path, method: :post,data: { confirm: "出席しますか？" }) do %>
-      <span><i class="fas fa-user-check icon-size"></i></span>
+      <%= link_to(attends_path, method: :post,data: { confirm: "出席しますか？" }) do %>
+        <span><i class="fas fa-user-check icon-size"></i></span>
         出席
       </li>
       <% end %>
       <li class="card">
         <%= link_to("/rooms/#{current_user.id}") do %>
-      <span><i class="far fa-comments icon-size"></i></span>
+        <span><i class="far fa-comments icon-size"></i></span>
         チャット
       </li>
       <% end %>
       <li class="card">
         <%= link_to(schedules_path) do %>
-      <span><i class="far fa-calendar-alt icon-size"></i></span>
+        <span><i class="far fa-calendar-alt icon-size"></i></span>
         スケジュール
       </li>
       <% end %>
       <li class="card">
         <%= link_to(tasks_path) do %>
-      <span><i class="fas fa-tasks icon-size"></i></span>
+        <span><i class="fas fa-tasks icon-size"></i></span>
         タスク
       </li>
       <% end %>
       <li class="card">
         <%= link_to("/attends") do %>
-      <span><i class="fas fa-graduation-cap icon-size"></i></span>
+        <span><i class="fas fa-graduation-cap icon-size"></i></span>
         出席状況
       </li>
       <% end %>
     </ul>
   </div>
 </div>
-
 </div>
 <% if @user.id == 5 %>
 <% @users.each do |user| %>
 <% if user.user_name==nil %>
-<div class="users-list shadow p-3 mb-1 mt-1 bg-light rounded">
-  <p><%= user.id%>.<%= user.user_name%><a>NO NAME</a></p>
-  <p><%= user.email%></p>
-</div>
+  <div class="users-list shadow p-3 mb-1 mt-1 bg-light rounded">
+    <p><%= user.id%>.<%= user.user_name%><a>NO NAME</a></p>
+    <p><%= user.email%></p>
+  </div>
 <%else%>
-<div class="users-list shadow p-3 mb-1 mt-1 bg-light rounded">
-  <p><%= user.id%>.<%= user.user_name%></p>
-  <p><%= user.email%></p>
-</div>
+  <div class="users-list shadow p-3 mb-1 mt-1 bg-light rounded">
+    <p><%= user.id%>.<%= user.user_name%></p>
+    <p><%= user.email%></p>
+  </div>
 <%end%>
 <%end%>
+
 <%else%>
 
 <% @users.each do |user| %>
 <% if user.user_name==nil %>
-<div class="users-index-item shadow p-3 mb-1 bg-light rounded">
-  <p><%= user.id%>.<%= user.user_name%><a>NO NAME</a></p>
-
-</div>
+  <div class="users-index-item shadow p-3 mb-1 bg-light rounded">
+    <p><%= user.id%>.<%= user.user_name%><a>NO NAME</a></p>
+  </div>
 <%else%>
-<div class="users-index-item shadow p-3 mb-1 bg-light rounded">
-  <p><%= user.id%>.<%= user.user_name%></p>
-</div>
+  <div class="users-index-item shadow p-3 mb-1 bg-light rounded">
+    <p><%= user.id%>.<%= user.user_name%></p>
+  </div>
 <%end%>
 <%end%>
 

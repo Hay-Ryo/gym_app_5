@@ -1,7 +1,7 @@
 <div class="attend-wrapper">
-  <h1 style="color:<%=current_user.color%>"><%= @user_name %><span>さん</span></h1>
+  <h1 style="color:<%=current_user.color%>"><%= @user_name %></h1>
   <div class="attend-container">
-    <%# ボタンの種類違う %>
+
     <%= link_to(attends_path, method: :post, class: "btn btn-success btn-lg btn-block",data: { confirm: "出席しますか？" }) do %>
     <div>出席</div>
     <% end %>
@@ -22,5 +22,4 @@
     </h5>
   </div>
   <%end%>
-
 </div>

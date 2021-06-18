@@ -1,10 +1,10 @@
 class SchedulesController < ApplicationController
-  
+
   def index
     @schedules = Schedule.all
     @schedule = current_user.schedules.build
   end
-    
+
   def show
     @schedules = Schedule.all
     @schedule = current_user.schedules.build

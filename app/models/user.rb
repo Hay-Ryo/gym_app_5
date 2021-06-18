@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates :user_name, uniqueness: true
   validates :email, uniqueness: true
 
+  # 画像アップできるように
   mount_uploader :img, ImgUploader
   
   def liked_by?(task_id)

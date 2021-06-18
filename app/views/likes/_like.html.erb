@@ -1,35 +1,35 @@
 <% if current_user.liked_by?(task.id) %>
-<div id="task-<%= task.id %>">
-  <div class="card-body task-complete">
-    <p class="card-text"><%= l task.created_at, format: '%Y年%-m月%-d日(%a)' %></p>
-    <p class="card-text lead"><%= task
+  <div id="task-<%= task.id %>">
+    <div class="card-body task-complete">
+      <p class="card-text"><%= l task.created_at, format: '%Y年%-m月%-d日(%a)' %></p>
+      <p class="card-text lead"><%= task
         .title %></p>
-    <p class="card-text task-text"><%= simple_format(h(task.content)) %></p>
-    <div class="task-btn">
-      <%= link_to(destroy_like_path(task), method: "delete", remote: true, class: "btn-warning btn btn-sm") do %>
-      <div>解除</div>
-      <% end %>
-      <%= link_to("/tasks/#{task.id}", method: "delete", class: "btn btn-secondary btn-sm ", data: { confirm: "このタスクを削除しますか？"}) do %>
-      <div>削除</div>
-      <% end %>
+      <p class="card-text task-text"><%= simple_format(h(task.content)) %></p>
+      <div class="task-btn">
+        <%= link_to(destroy_like_path(task), method: "delete", remote: true, class: "btn-warning btn btn-sm") do %>
+        <div>解除</div>
+        <% end %>
+        <%= link_to("/tasks/#{task.id}", method: "delete", class: "btn btn-secondary btn-sm ", data: { confirm: "このタスクを削除しますか？"}) do %>
+        <div>削除</div>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 <% else %>
-<div id="task-<%= task.id %>">
-  <div class="card-body ">
-    <p class="card-text"><%= l task.created_at, format: '%Y年%-m月%-d日(%a)' %></p>
-    <p class="card-text lead"><%= task
+  <div id="task-<%= task.id %>">
+    <div class="card-body ">
+      <p class="card-text"><%= l task.created_at, format: '%Y年%-m月%-d日(%a)' %></p>
+      <p class="card-text lead"><%= task
         .title %></p>
-    <p class="card-text task-text "><%= simple_format(h(task.content)) %></p>
-    <div class="task-btn">
-      <%= link_to(create_like_path(task), method: "post", remote: true, class: "btn btn-success btn-sm ", ) do %>
-      <div>完了</div>
-      <% end %>
-      <%= link_to("/tasks/#{task.id}", method: "delete", class: "btn btn-secondary btn-sm ", data: { confirm: "このタスクを削除しますか？"}) do %>
-      <div>削除</div>
-      <% end %>
+      <p class="card-text task-text "><%= simple_format(h(task.content)) %></p>
+      <div class="task-btn">
+        <%= link_to(create_like_path(task), method: "post", remote: true, class: "btn btn-success btn-sm " ) do %>
+        <div>完了</div>
+        <% end %>
+        <%= link_to("/tasks/#{task.id}", method: "delete", class: "btn btn-secondary btn-sm ", data: { confirm: "このタスクを削除しますか？"}) do %>
+        <div>削除</div>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 <% end %>

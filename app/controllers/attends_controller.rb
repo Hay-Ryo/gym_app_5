@@ -1,25 +1,25 @@
 class AttendsController < ApplicationController
   def index
     @user = current_user
-    @attends=Attend.all
+    @attends = Attend.all
     @attends_recently = @user.attends.order(:created_at).last(5)
-    @user_name=@user.user_name
+    @user_name = @user.user_name
     @attends_count = Attend.where(id: @attends).count    
     @month = (Time.now.beginning_of_month..Time.now.end_of_day).to_s
     @year = (Time.now.beginning_of_year..Time.now.end_of_year).to_s
-    @month_counts= current_user.attends.where('created_at > ?', @month).count
-    @year_counts= current_user.attends.where('created_at > ?', @year).count
+    @month_counts = current_user.attends.where('created_at > ?', @month).count
+    @year_counts = current_user.attends.where('created_at > ?', @year).count
   end
   
   def show
     @user = current_user
-    @user_name=@user.user_name
+    @user_name = @user.user_name
     @attends = @user.attends.page(params[:page]).order(created_at: :desc)
     @attends_count = Attend.where(id: @attends).count
     @month = (Time.now.beginning_of_month..Time.now.end_of_day).to_s
     @year = (Time.now.beginning_of_year..Time.now.end_of_year).to_s
-    @month_counts= current_user.attends.where('created_at > ?', @month).count
-    @year_counts= current_user.attends.where('created_at > ?', @year).count
+    @month_counts = current_user.attends.where('created_at > ?', @month).count
+    @year_counts = current_user.attends.where('created_at > ?', @year).count
   end
 
   def total
