@@ -76,4 +76,6 @@ gem 'mini_magick'
 
 gem 'font-awesome-sass'
 
-
+group :production, :staging do
+    gem 'unicorn'
+end
