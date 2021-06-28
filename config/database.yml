@@ -26,5 +26,8 @@ production:
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 10f071eff05ae8117780f387debe38ca06c90cb6
