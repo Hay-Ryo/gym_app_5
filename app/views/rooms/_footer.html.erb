@@ -1,4 +1,4 @@
-<footer class="" id="footer" id="to_bottom" onmouseover="over(this)">
+<footer class="" id="footer" id="to_bottom">
   <%= form_with model: @message, local: false do |f| %>
   <div class="form-group">
     <!-- ここは自動的に message_content というidが付く。 -->
@@ -31,24 +31,19 @@
 </footer>
 
 <script>
-  let scrollBottom = document.getElementById('to_bottom');
-  let element = document.documentElement;
-  function over() {
-    let toBottom = element.scrollHeight - element.clientHeight;
-    window.scroll(0, toBottom);
-  }
+// 1MB以上のイメージはアラート出す
   const sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
 　const fileInput = document.getElementById('img_name'); // input要素
 　const handleFileSelect = () => {
-  const files = fileInput.files;
-  for (let i = 0; i < files.length; i++) {
-    if (files[i].size > sizeLimit) {
-      // ファイルサイズが制限以上
-      alert('ファイルサイズは1MB以下にしてください'); // エラーメッセージを表示
-      fileInput.value = ''; // inputの中身をリセット
-      return; // この時点で処理を終了する
+    const files = fileInput.files;
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].size > sizeLimit) {
+        // ファイルサイズが制限以上
+        alert('ファイルサイズは1MB以下にしてください'); // エラーメッセージを表示
+        fileInput.value = ''; // inputの中身をリセット
+        return; // この時点で処理を終了する
+      }
     }
   }
-}
-fileInput.addEventListener('change', handleFileSelect);
+  fileInput.addEventListener('change', handleFileSelect);
 </script>
