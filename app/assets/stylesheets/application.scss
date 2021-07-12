@@ -265,8 +265,10 @@ footer {
 }
 
 .msg-info img {
-  border-radius: 30px;
-  width: 95%;
+  max-width: 25rem;
+  width: 99%;
+  height: 15rem;
+  border-radius: 5%;
 }
 
 #img_name{
@@ -275,21 +277,23 @@ footer {
 
 // ユーザーの画像
 .user-img img{
-  max-width: 48px;
-  height: 48px;
+  max-width: 3rem;
+  width: 3rem;
+  height: 3rem;
   padding: 0px;
-  margin: 10px 10px;
-  border-radius:999px;
+  margin: 0.5rem 0.5rem;
+  border-radius: 50%;
   object-position: 50% 50%;
   overflow: hidden;
 }
 
 .user-image img{
   max-width: 10rem;
+  width: 10rem;
   height: 10rem;
   padding: 0px;
   margin: 10px 10px;
-  border-radius:999px;
+  border-radius: 50%;
   object-position: 50% 50%;
   overflow: hidden;
 }
