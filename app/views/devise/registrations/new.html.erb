@@ -10,7 +10,7 @@
 
   <div class="field new-color">
     <%= f.label :カラー %><br />
-    <input type="color" id="color-select1" name="field_1" autofocus><br />
+    <input type="color" id="color-select1" name="field_1" autofocus ><br />
     <%= f.text_field :color, id: 'hsvflat', autocomplete: "color",id: "color1" %>
   </div>
 
@@ -40,7 +40,7 @@
 </div>
 
 <script>
-  document.querySelector('input[name="field_1"]').focus();
+  window.addEventListener('load', (e) => document.querySelector('input[name="field_1"]').focus());
 
 // apprication.jsに「document.addEventListener('turbolinks:load', () => 」を追加して書いても動作はするが、consoleエラーが発生する。
 function func1() {
