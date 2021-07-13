@@ -19,11 +19,11 @@
   <div class="field">
     <%= f.label :ユーザーカラー %><br />
     <input type="color" id="color-select2">
-    <%= f.text_field :color, autocomplete: "color",id: "color2" %>
+    <%= f.text_field :color,autofocus: true, autocomplete: "color",id: "color2" %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
