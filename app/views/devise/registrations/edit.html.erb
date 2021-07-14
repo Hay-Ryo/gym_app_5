@@ -1,6 +1,10 @@
 <div class="user-edit-wrapper" style="background-color:<%= current_user.color%>">
   <div class="user-image">
-    <img src="<%= current_user.img %>">
+    <% if current_user.img? %>
+      <img src="<%= current_user.img %>" class="icon" alt="ユーザーアイコン">
+    <% else %>
+      <image src="/assets/IMG_3794.JPG" class="icon" alt="ユーザーアイコン" %>
+    <% end %>
   </div>
   <h2><%= current_user.user_name.to_s.humanize %> <br>
   <span>編集画面</span></h2>
