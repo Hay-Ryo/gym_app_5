@@ -28,7 +28,7 @@ class ImgUploader < CarrierWave::Uploader::Base
   #
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
     # デフォルト画像
-    asset_path "IMG_3794.JPG"
+    "/assets/IMG_3794.JPG"
   end
 
   # Process files as they are uploaded:
