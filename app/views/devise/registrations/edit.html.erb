@@ -3,7 +3,7 @@
     <% if current_user.img? %>
       <img src="<%= current_user.img %>" class="icon" alt="ユーザーアイコン">
     <% else %>
-      <%= image_tag("/assets/IMG_3794.jpg") %>
+      <%= image_tag asset_path("IMG_3794.jpg") %>
     <% end %>
   </div>
   <h2><%= current_user.user_name.to_s.humanize %> <br>
