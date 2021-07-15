@@ -1,7 +1,7 @@
 <div class="user-edit-wrapper" style="background-color:<%= current_user.color%>">
   <div class="user-image">
     <% if current_user.img? %>
-      <img src="<%= current_user.img %>" class="icon" alt="ユーザーアイコン">
+      <img src="<%= current_user.img %>">
     <% else %>
       <%= image_tag asset_path("IMG_3794.jpeg") %>
     <% end %>

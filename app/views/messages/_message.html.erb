@@ -4,7 +4,11 @@
     <% if current_user.id==message.user.id %>
     <div class="msg-own">
       <div class="user-img">
-        <img src="<%= message.user.img %>">
+        <% if current_user.img? %>
+      　　<img src="<%= current_user.img %>">
+    　　<% else %>
+      　　<%= image_tag asset_path("IMG_3794.jpeg") %>
+    　　<% end %>
       </div>
       <div class="msg-info">
         <p><%= message.id %>. <%= message.user.user_name %> :
@@ -40,7 +44,11 @@
 <%# 自分以外のユーザーのコメント %>
     <div class="msg-other">
       <div class="user-img">
-        <img src="<%= message.user.img %>">
+        <% if current_user.img? %>
+      　　<img src="<%= current_user.img %>">
+    　　<% else %>
+      　　<%= image_tag asset_path("IMG_3794.jpeg") %>
+    　　<% end %>
       </div>
       <div class="msg-info">
         <p><%= message.id %>. <%= message.user.user_name %> :
