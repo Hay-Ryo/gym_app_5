@@ -13,15 +13,15 @@
         <%= form_with model: @schedule, local: true do |f| %>
         <div class="modal-body">
           <div class="form-group">
-            <%= f.label :タイトル、人など %>
+            <%= f.label :タイトル %>
             <%= f.text_field :title, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :内容、場所など %>
+            <%= f.label :内容 %>
             <%= f.text_area :content, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :日時 %>
+            <%= f.label :日時 %><br>
             <%= f.datetime_select :start_time,{},class: "form-control", style: 'display: inline-block;width: auto;'  %>
           </div>
         </div>
