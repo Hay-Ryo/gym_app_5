@@ -635,9 +635,11 @@ input[type="color"] {
   box-shadow: 0px 2px 10px #c1ced7;
 }
 
-.sch-time{
-  padding: 0.375rem 0.15rem;
-  font-size: 0.8rem;
+@media screen and (max-width: 375px){
+  .sch-time{
+    padding: 0.375rem 0.15rem;
+    font-size: 0.8rem;
+  }
 }
 
 .schedule-title a{
