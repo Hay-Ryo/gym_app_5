@@ -157,11 +157,12 @@ footer {
 // チャット
 // メッセージ一覧
 .message{
-  padding: 10px 15px 10px;
+  padding: 3px 3px 3px;
   border-top-width: 0px;
   border-left-width: 1px;
   border-right-width: 1px;
   border-bottom-width: 1px;
+  border-radius: 5px;
   border-style: solid;
   border-color: #EBEEF0;
   background-color: #ffffff;
@@ -179,7 +180,7 @@ footer {
 #message-container {
   max-width: 768px;
   padding: 1rem 1rem 9rem 1rem;
-  background-color: #50ABA2;
+  background-color: #50AB75;
 }
 
 .msg-own{
