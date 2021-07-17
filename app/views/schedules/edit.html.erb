@@ -3,13 +3,13 @@
     <div class="schedule-edit">
       <h3>スケジュール編集</h3>
       <%= form_with model: @schedule, local: true do |f| %>
-        <p><%= f.label "タイトル、人物など" %></p>
+        <p><%= f.label "タイトル" %></p>
         <%= f.text_area :title %>
-        <p><%= f.label "内容、場所など" %></p>
+        <p><%= f.label "内容" %></p>
         <%= f.text_area :content %>
         <%= f.submit :編集 %>
       <% end %>
     </div>
   </div>
-  <%= link_to "前ページへ",schedules_path ,class: "mb-3 ml-3" %>
 </div>
+<%= link_to "前ページへ",schedules_path ,class: "mb-3 ml-3" %>

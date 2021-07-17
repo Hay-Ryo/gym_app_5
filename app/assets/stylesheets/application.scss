@@ -484,6 +484,7 @@ input[type="color"] {
   box-shadow: 0 1px 6px #c1ced7;
   border-radius: 10px;
   padding: 1.0rem;
+  font-size: 1.5rem;
   opacity:0.9;
   color: gold;
 }
@@ -619,7 +620,8 @@ input[type="color"] {
 .schedule-wrapper{
   max-width: 768px;
   margin: 0 auto;
-  padding-left: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   box-shadow: 0px 2px 10px #c1ced7;
 }
 
@@ -638,7 +640,7 @@ input[type="color"] {
 
 @media screen and (max-width: 400px){
   .sch-time{
-    padding: 0.375rem 0.1rem;
+    padding: 0.375rem 0.01rem;
     font-size: 0.8rem;
   }
 }
@@ -688,8 +690,6 @@ input[type="color"] {
   margin: 10px;
   padding: 5px;
   border-radius: 12px;
-  color: white;
-  background-color: rgb(3, 122, 251);
 }
 
 .schedule-btn{
@@ -735,7 +735,7 @@ input[type="color"] {
 }
 
 .task-text{
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .add-btn{
@@ -748,8 +748,9 @@ input[type="color"] {
   height: 4rem;
   right: 0.9rem;
   bottom: 0;
+  margin-bottom: 0.25rem;
   z-index: 1000;
-  font-size: 2.25rem;
+  font-size: 3.25rem;
   border-radius: 50%;
 }
 
