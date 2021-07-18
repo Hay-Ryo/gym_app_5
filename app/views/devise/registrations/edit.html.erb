@@ -84,19 +84,19 @@ $(function () {
   }
   document.getElementById("color-select2").onchange = func2;
 
-  let limitSize = 1024 * 1024 * 1;　// 制限サイズ
-　const fileInput = document.getElementById('image'); // input要素
-　const handleFileSelect = () => {
-    const files = fileInput.files;
-    for (let i = 0; i < files.length; i++) {
-      if (files[i].size > limitSize) {
+  const limitSize = 1024 * 1024 * 1;　// 制限サイズ
+　const inputFile = document.getElementById('image'); // input要素
+　const fileSelectHandle = () => {
+    const file2 = inputFile.files;
+    for (let i = 0; i < file2.length; i++) {
+      if (file2[i].size > limitSize) {
         // ファイルサイズが制限以上
         alert('ファイルサイズは1MB以下にしてください'); // エラーメッセージを表示
-        fileInput.value = ''; // inputの中身をリセット
+        inputFile.value = ''; // inputの中身をリセット
         return; // この時点で処理を終了する
       }
     }
   }
-  fileInput.addEventListener('change', handleFileSelect);
+  inputFile.addEventListener('change', fileSelectHandle);
 
 </script>
