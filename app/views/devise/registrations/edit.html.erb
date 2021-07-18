@@ -84,7 +84,7 @@ $(function () {
   }
   document.getElementById("color-select2").onchange = func2;
 
-  const sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
+  let sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
 　const fileInput = document.getElementById('image'); // input要素
 　const handleFileSelect = () => {
     const files = fileInput.files;

@@ -32,7 +32,7 @@
 
 <script>
 // 1MB以上のイメージはアラート出す
-  const sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
+  let sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
 　const fileInput = document.getElementById('img_name'); // input要素
 　const handleFileSelect = () => {
     const files = fileInput.files;
