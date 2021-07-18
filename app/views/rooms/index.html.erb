@@ -1,11 +1,15 @@
 <div class="users-index">
   <h4>ようこそ</h4>
-  <% if current_user.user_name == nil %>
-    <h2>ユーザー</h2>
-  <%else%>
+    <div class="user-image">
+    <% if current_user.img? %>
+      <img src="<%= current_user.img %>">
+    <% else %>
+      <%= image_tag asset_path("IMG_3794.jpg") %>
+    <% end %>
+    </div>
     <h2 style="color:<%=current_user.color%>"><%=@user.user_name%><br>
     </h2><span>さん</span>
-  <%end%>
+  
   <div class="main-menu">
     <ul class="card-group">
       <li class="card">
