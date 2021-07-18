@@ -15,9 +15,9 @@
   <div class="field">
     <%= f.label :プロフィール画像 %><br />
     <label for="image">
-    <span class="button">画像を選択</span><%= f.file_field :img, id: "image img_name" %>
+    <span class="button">画像を選択</span><%= f.file_field :img, id: "image" %>
 </label>
-<div id="img-label"></div>
+<div id="img-name"></div>
   </div>
 
   <div class="field">
@@ -71,7 +71,7 @@
 $(function () {
   $('#image').on("change", function () {
     let img = this.files[0];
-    const imgName = document.getElementById("img-label");
+    const imgName = document.getElementById("img-name");
     if (img != null) {
       imgName.insertAdjacentHTML('afterbegin', img.name);
     }
@@ -84,9 +84,8 @@ $(function () {
   }
   document.getElementById("color-select2").onchange = func2;
 
-  // 1MB以上のイメージはアラート出す
   const sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
-　const fileInput = document.getElementById('img_name'); // input要素
+　const fileInput = document.getElementById('image'); // input要素
 　const handleFileSelect = () => {
     const files = fileInput.files;
     for (let i = 0; i < files.length; i++) {
@@ -99,5 +98,5 @@ $(function () {
     }
   }
   fileInput.addEventListener('change', handleFileSelect);
-  
+
 </script>
