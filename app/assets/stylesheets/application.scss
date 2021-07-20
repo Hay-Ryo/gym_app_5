@@ -20,10 +20,10 @@
 
   
   
-  // トップページ
-  .main-menu{
-    padding-left: 3px;
-  }
+// トップページ
+.main-menu{
+  padding-left: 3px;
+}
   
 .users-index h2{
   font-weight: bold;
@@ -166,15 +166,15 @@ footer {
 // チャット
 // メッセージ一覧
 .message{
-  padding: 3px 3px 3px;
+  // padding: 3px 3px 3px;
   border-top-width: 0px;
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-radius: 5px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-radius: 10px;
   border-style: solid;
-  border-color: #EBEEF0;
-  background-color: #ffffff;
+  // border-color: #EBEEF0;
+  // background-color: #ffffff;
 }
 
 .message a{
@@ -508,7 +508,7 @@ input[type="color"] {
   text-align: center;
 }
 
-.btn-color a{
+.btn-color{
   background-color: darkblue;
 }
 
