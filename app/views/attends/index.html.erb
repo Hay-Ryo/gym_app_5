@@ -5,7 +5,7 @@
     <%= link_to(attends_path, method: :post, class: "btn btn-success btn-lg btn-block",data: { confirm: "出席しますか？" }) do %>
     <div>出席</div>
     <% end %>
-    <%= link_to("/attends/#{@user.id}", class: "btn btn-primary btn-lg btn-block mt-2") do %>
+    <%= link_to("/attends/#{@user.id}", class: " btn-color btn-lg btn-block mt-2") do %>
     <div>個人出席</div>
     <% end %>
     <%= link_to("/attends/total", class: "btn btn-primary btn-lg btn-block mt-2") do %>
@@ -16,7 +16,7 @@
     <%= render 'attend' %>
   </div>
   <% @attends_recently.each do |attend|%>
-  <div class="card-header btn-warning">
+  <div class="attend-list card-header btn-warning">
     <h5>
       <%= link_to attend.created_at.strftime('%Y/%m/%d %H:%M:%S'),"/attends/#{attend.id}",method: :delete, data: { confirm: "この出席を削除しますか？" } %>
     </h5>
