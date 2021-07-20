@@ -166,13 +166,14 @@ footer {
 // チャット
 // メッセージ一覧
 .message{
-  // padding: 3px 3px 3px;
+  margin-bottom: 0.3rem;
   border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
   border-bottom-width: 0px;
   border-radius: 10px;
   border-style: solid;
+  // padding: 3px 3px 3px;
   // border-color: #EBEEF0;
   // background-color: #ffffff;
 }
@@ -285,6 +286,13 @@ footer {
   font-size: revert;
 }
 
+.user-img {
+  margin: 0.5rem;
+  width: 4rem;
+  line-height: 0rem;
+}
+
+// チャット画面の写真
 .user-img img{
   max-width: 3rem;
   width: 3rem;
@@ -296,6 +304,7 @@ footer {
   overflow: hidden;
 }
 
+// トップ画面、ユーザー編集の写真
 .user-image img{
   max-width: 10rem;
   width: 10rem;
