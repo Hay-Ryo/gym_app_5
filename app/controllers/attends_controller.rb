@@ -60,6 +60,7 @@ class AttendsController < ApplicationController
   def destroy
     @attend = Attend.find_by(id: params[:id])
     @attend.destroy
+    flash[:alert]='出席を削除しました'
     redirect_to attend_path
   end
 

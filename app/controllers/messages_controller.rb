@@ -3,13 +3,13 @@ class MessagesController < ApplicationController
   def create
     @message = current_user.messages.create!(message_params)
     # 投稿されたメッセージをチャット参加者に配信
-    ActionCable.server.broadcast 'room_channel',{message: @message.template}
+    # ActionCable.server.broadcast 'room_channel',{message: @message.template}
   end
 
   def destroy
       @message = Message.find_by(id: params[:id])
       @message.destroy
-      flash[:alert]='メッセージを削除しました。'
+      flash[:alert]='メッセージを削除しました'
       redirect_to("/rooms/#{current_user.id}")
   end
 
