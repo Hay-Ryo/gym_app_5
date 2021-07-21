@@ -5,7 +5,7 @@
     <div class="msg-own">
       <div class="user-img">
         <% if current_user.img? %>
-      　　<img src="<%= current_user.img %>">
+      　　<img src="<%= message.user.img %>">
     　　<% else %>
       　　<%= image_tag asset_path("IMG_3001.jpg") %>
     　　<% end %>
@@ -45,7 +45,7 @@
     <div class="msg-other">
       <div class="user-img">
         <% if current_user.img? %>
-      　　<img src="<%= current_user.img %>">
+      　　<img src="<%= message.user.img %>">
     　　<% else %>
       　　<%= image_tag asset_path("IMG_3794.jpeg") %>
     　　<% end %>

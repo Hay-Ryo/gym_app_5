@@ -1,6 +1,6 @@
 <p>全タスク <%= @tasks_count.to_i %></p>
 <p>完了済み <%= @complete.to_i %></p>
-<% if @uncomplete.round(1) == NaN %>
+<% if @uncomplete.round(1).nan? == true %>
 <p>達成率 0 %</p>
 <% else %>
 <p>達成率 <%= @uncomplete.round(1) %>%</p>

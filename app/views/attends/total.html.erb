@@ -9,18 +9,20 @@
   </div>
 <%end%>
 
-<div class="schedule-header">
-  <%= month_calendar events: @attend_name do |date,attends| %>
-    <%= date.day %>
-</div>
-
-<% attends.each do |attend| %>
-  <div class="attend-name">
-    <% if attend.user_name==nil%>
-      <P class="mb-0 mt-0">ユーザー</P>
-    <% else %>
-      <%= attend.user_name %>
+<div class="schedule-wrapper col-12">
+  <!-- <div class="schedule-header">
+ -->    <%= month_calendar events: @attend_name do |date,attends| %>
+      <%= date.day %>
+  <!-- </div>
+ -->
+      <% attends.each do |attend| %>
+      <div class="attend-name">
+        <% if attend.user_name==nil%>
+          <P class="mb-0 mt-0">ユーザー</P>
+        <% else %>
+          <%= attend.user_name %>
+        <% end %>
+      </div>
+      <% end %>
     <% end %>
-  </div>
-  <% end %>
-<% end %>
+</div>
