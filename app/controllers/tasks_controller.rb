@@ -20,7 +20,7 @@ class TasksController < ApplicationController
   def destroy
       @task = Task.find_by(id: params[:id])
       @task.destroy
-      flash[:alert]='タスクを削除しました。'
+      flash[:alert]='タスクを削除しました'
       redirect_to("/tasks/")
   end
   

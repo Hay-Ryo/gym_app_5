@@ -812,3 +812,14 @@ input[type="color"] {
   color: #a5a5a5;
   background-color: #dee4ea;
 }
+
+.flash-option{
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 43px;
+  opacity: 0.5;
+  z-index: 10000;
+}
