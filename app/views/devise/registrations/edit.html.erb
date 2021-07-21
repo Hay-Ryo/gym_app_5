@@ -15,7 +15,7 @@
   <div class="field">
     <%= f.label :プロフィール画像 %><br />
     <label for="image">
-    <span class="button">画像を選択</span><%= f.file_field :img, id: "image" %>
+    <span class="img-add">画像を選択</span><%= f.file_field :img, id: "image" %>
 </label>
 <div id="img-name"></div>
   </div>
@@ -50,7 +50,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(入力して更新して下さい)</i><br />
+    <%= f.label :current_password %> <i>(入力し更新して下さい)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 

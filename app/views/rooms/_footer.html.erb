@@ -1,5 +1,5 @@
 <footer class="" id="footer" id="to_bottom">
-  <%= form_with model: @message, local: false do |f| %>
+  <%= form_with model: @message, local: true do |f| %>
   <div class="form-group">
     <!-- ここは自動的に message_content というidが付く。 -->
     <%= f.text_area :content, class: 'form-control', rows: '1', maxlength: '500' %>

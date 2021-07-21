@@ -99,14 +99,14 @@
   display: none;
 }
 
-.button {
+.img-add {
   display: block;
   width: 100px;
   text-align: center;
   background-color: #ebebeb;
   padding: 3px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid rgb(230, 230, 230);
 }
 
 // ヘッダー
@@ -419,6 +419,7 @@ input[type="color"] {
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
 }
+
 .login-wrapper{
   color: #584f4f;
   max-width: 768px;
@@ -624,20 +625,20 @@ input[type="color"] {
   font-size: 12px;
 }
 
-.schedule{
-  max-width: 768px;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: 0px 2px 10px #c1ced7;
-}
+// .schedule{
+//   max-width: 768px;
+//   width: 90%;
+//   margin: 0 auto;
+//   text-align: center;
+//   box-shadow: 0px 2px 10px #c1ced7;
+// }
 
 .schedule-wrapper{
   max-width: 768px;
   margin: 0 auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  box-shadow: 0px 2px 10px #c1ced7;
+  box-shadow: 0px 1px 3px #c1ced7;
 }
 
 .schedule-header{
@@ -723,9 +724,6 @@ input[type="color"] {
 
 .simple-calendar td{
   padding: 0px;
-}
-.simple-calendar.calender-scroll {
-  padding: 0.3rem;
 }
 
 // カレンダーのスクロール
