@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to("/rooms/#{current_user.id}")
     else
-      render "/rooms/#{current_user.id}"
+      render("/rooms/#{current_user.id}")
     # 投稿されたメッセージをチャット参加者に配信
     # ActionCable.server.broadcast 'room_channel',{message: @message.template}
   end
