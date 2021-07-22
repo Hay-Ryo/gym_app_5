@@ -813,8 +813,9 @@ input[type="color"] {
   background-color: #dee4ea;
 }
 
+@media screen and (max-width: 768px){
 .flash-option{
-  display: none;
+  // display: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -822,4 +823,5 @@ input[type="color"] {
   line-height: 43px;
   opacity: 0.5;
   z-index: 10000;
+}
 }
