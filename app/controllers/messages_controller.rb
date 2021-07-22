@@ -1,8 +1,12 @@
 class MessagesController < ApplicationController
   
   def create
-    @message = current_user.messages.create!(message_params)
-    # redirect_to("/rooms/#{current_user.id}")
+    @message = current_user.messages.new(message_params)
+    if @message.save
+      redirect_to("/rooms/#{current_user.id}")
+    else
+      render ("/rooms/#{current_user.id}")
+    end
     # 投稿されたメッセージをチャット参加者に配信
     # ActionCable.server.broadcast 'room_channel',{message: @message.template}
   end
