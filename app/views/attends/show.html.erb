@@ -1,14 +1,14 @@
 <div class="attend-wrapper" style="color:<%=current_user.color%>">
   <h1 class="name-plate"><%=@user_name%></h1>
-</div>
 
-<div class="attend-container">
+  <div class="attend-container">
     <%= render 'attend' %>
-  <div id="attend_list">
+    <div id="attend_list">
     <%= render 'attend_more' %>
-  </div>
+    </div>
 
-  <div class="attend-more">
+    <div class="attend-more">
     <%= link_to_next_page @attends, 'もっと見る', remote: true, id: 'view_more' %>
+    </div>
   </div>
 </div>
