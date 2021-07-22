@@ -44,7 +44,7 @@
 <%# 自分以外のユーザーのコメント %>
     <div class="msg-other">
       <div class="user-img">
-        <% if current_user.img? %>
+        <% if message.user.img? %>
       　　<img src="<%= message.user.img %>">
     　　<% else %>
       　　<%= image_tag asset_path("IMG_3001.jpg") %>
