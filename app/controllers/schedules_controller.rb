@@ -13,9 +13,15 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    current_user.schedules.create!(schedule_params)
-    @schedules = Schedule.all
-    redirect_to schedules_path
+     @schedule = current_user.schedules.new(schedule_params)
+    if @schedule.save
+      redirect_to schedules_path
+    else
+      render 'index'
+    end
+    # current_user.schedules.create!(schedule_params)
+    # @schedules = Schedule.all
+    # redirect_to schedules_path
   end
 
   def edit
