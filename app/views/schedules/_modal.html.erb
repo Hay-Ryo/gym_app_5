@@ -14,7 +14,7 @@
         <div class="modal-body">
           <div class="form-group">
             <%= f.label :タイトル %>
-            <%= f.text_field :title, class: "form-control", id: "schedule_content" %>
+            <%= f.text_field :title, class: "form-control", id: "schedule_title" %>
           </div>
           <div class="form-group">
             <%= f.label :内容 %>
@@ -55,7 +55,7 @@ scheduleContent.addEventListener("keyup", () => {
 
   }else if(scheduleTitle.value === ''){
     scheduleButton.disabled = true;
-    
+
   }else {
    // 失敗した場合は、disabledをtrueに
    scheduleButton.disabled = false;
