@@ -10,15 +10,15 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <%= form_with model: @schedule, local: true do |f| %>
+        <%= form_with model: @schedule, local: true, name: "content_form" do |f| %>
         <div class="modal-body">
           <div class="form-group">
             <%= f.label :タイトル %>
-            <%= f.text_field :title, class: "form-control" %>
+            <%= f.text_field :title, class: "form-control", name: "content"%>
           </div>
           <div class="form-group">
             <%= f.label :内容 %>
-            <%= f.text_area :content, class: "form-control" %>
+            <%= f.text_area :content, class: "form-control", name: "content"%>
           </div>
           <div class="form-group">
             <%= f.label :日時 %><br>
@@ -26,11 +26,25 @@
           </div>
         </div>
         <div class="modal-footer">
-          <%= f.submit "登録する", class:"btn btn-success" %>
+          
           <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+          <%= f.submit "登録する", class:"btn btn-success", onClick="return check();" %>
         </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+            function check(){
+                if (content_form.content.value == ""){
+            
+                    alert("入力して下さい");
+                    return false;  
+                }else{
+                   
+                    return true; 
+                }
+            }
+        </script>
