@@ -22,11 +22,16 @@
   
 // トップページ
 .main-menu{
-  padding-left: 3px;
+  padding-left: 4px;
 }
   
 .users-index h2{
   font-weight: bold;
+}
+
+.users-index-item {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .card-group{
@@ -82,6 +87,11 @@
   color: #ffffff;
 }
 
+.navbar-collapse >.navbar-nav > li :hover {
+  opacity: 0.5;
+  background-color: #2f4f4f;
+}
+
 @media screen and (min-width: 576px){
   .card-group > .card:not(:last-child) {
     border-top-left-radius: 10px;
@@ -120,10 +130,6 @@
 .navbar-light .navbar-toggler{
   border-color: rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 255, 255, 0.411);
-}
-
-.navbar-brand a{
-  width: 100%;
 }
 
 .navbar-brand a:hover{
