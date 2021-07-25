@@ -14,7 +14,7 @@
         <div class="modal-body">
           <div class="form-group">
             <%= f.label :タイトル %>
-            <%= f.text_field :title, class: "form-control" %>
+            <%= f.text_field :title, class: "form-control", id: "schedule_content" %>
           </div>
           <div class="form-group">
             <%= f.label :内容 %>
@@ -37,7 +37,7 @@
 </div>
 
 <script >
-
+  const scheduleTitle = document.getElementById('schedule_title');
   const scheduleContent = document.getElementById('schedule_content');
   const scheduleButton = document.getElementById('schedule-button');
 // const p = document.querySelector("#helper-text");
@@ -46,13 +46,19 @@
 // keyupイベントを拾う
 scheduleContent.addEventListener("keyup", () => {
  // inputの中身を正規表現でチェック
- if (scheduleContent.value === '') {
+ if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
    // 成功した場合は、disabledをfalseに
-   scheduleButton.disabled = false;
-   
- } else {
-   // 失敗した場合は、disabledをtrueに
    scheduleButton.disabled = true;
+   
+ }else if(scheduleContent.value === ''){
+  scheduleButton.disabled = true;
+
+  }else if(scheduleTitle.value === ''){
+    scheduleButton.disabled = true;
+    
+  }else {
+   // 失敗した場合は、disabledをtrueに
+   scheduleButton.disabled = false;
  }
 });
         </script>
