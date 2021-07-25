@@ -6,9 +6,9 @@ class RoomsController < ApplicationController
   end
 
   def show
-      @messages = Message.includes(:user).order(:id).last(10)
-      # メッセージ投稿のため
-      @message = current_user.messages.build
+    @messages = Message.includes(:user).order(:id).last(10)
+    # メッセージ投稿のため
+    @message = current_user.messages.build
     end
 
   def show_additionally
