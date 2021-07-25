@@ -38,7 +38,7 @@
 
 <script >
   window.scheduleContent = document.getElementById('schedule_content')
-            const button_activation = () => {
+            const button_active = () => {
         if (scheduleContent.value === '') {
             scheduleButton.classList.add('disabled')
           } else {
@@ -49,6 +49,6 @@
 
     // フォームに入力した際の動作
     scheduleContent.addEventListener('input', () => {
-        button_activation()
+        button_active()
     })
         </script>
