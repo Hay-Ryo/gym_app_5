@@ -88,9 +88,15 @@
 }
 
 .navbar-collapse >.navbar-nav > li :hover {
+  font-size: 23px;
   opacity: 0.5;
-  background-color: #2f4f4f;
   transition: all 0.3s;
+}
+
+@media screen and (min-width: 768px){
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0.5rem;
 }
 
 @media screen and (min-width: 576px){
