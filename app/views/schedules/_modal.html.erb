@@ -38,22 +38,6 @@
 
 <script >
 
-  window.scheduleContent = document.getElementById('schedule_content')
-   const scheduleButton = document.getElementById('schedule-button')
-            const button_active = () => {
-        if (scheduleContent.value === '') {
-            scheduleButton.classList.add('disabled')
-          } else {
-            scheduleButton.classList.remove('disabled')
-            
-        }
-    }
-
-    // フォームに入力した際の動作
-    scheduleContent.addEventListener('onChange', () => {
-        button_active()
-    })
-
     const scheduleContent = document.getElementById('schedule_content');
 const scheduleButton = document.document.getElementById('schedule-button');
 // const p = document.querySelector("#helper-text");
