@@ -44,15 +44,15 @@
 
 
 // keyupイベントを拾う
-input.addEventListener("keyup", () => {
+scheduleContent.addEventListener("keyup", () => {
  // inputの中身を正規表現でチェック
  if (scheduleContent.value === '') {
    // 成功した場合は、disabledをfalseに
-   button.disabled = false;
+   scheduleButton.disabled = false;
    
  } else {
    // 失敗した場合は、disabledをtrueに
-   button.disabled = true;
+   scheduleButton.disabled = true;
  }
 });
         </script>
