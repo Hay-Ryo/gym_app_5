@@ -53,4 +53,22 @@
     scheduleContent.addEventListener('onChange', () => {
         button_active()
     })
+
+    const scheduleContent = document.getElementById('schedule_content');
+const scheduleButton = document.document.getElementById('schedule-button');
+// const p = document.querySelector("#helper-text");
+
+
+// keyupイベントを拾う
+input.addEventListener("keyup", () => {
+ // inputの中身を正規表現でチェック
+ if (scheduleContent.value === '') {
+   // 成功した場合は、disabledをfalseに
+   button.disabled = false;
+   
+ } else {
+   // 失敗した場合は、disabledをtrueに
+   button.disabled = true;
+ }
+});
         </script>
