@@ -10,15 +10,15 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <%= form_with model: @schedule, local: true, name: "content_form" do |f| %>
+        <%= form_with model: @schedule, local: true do |f| %>
         <div class="modal-body">
           <div class="form-group">
             <%= f.label :タイトル %>
-            <%= f.text_field :title, class: "form-control", name: "content"%>
+            <%= f.text_field :title, class: "form-control" %>
           </div>
           <div class="form-group">
             <%= f.label :内容 %>
-            <%= f.text_area :content, class: "form-control", name: "content"%>
+            <%= f.text_area :content, class: "form-control",id: "schedule_content" %>
           </div>
           <div class="form-group">
             <%= f.label :日時 %><br>
@@ -28,7 +28,7 @@
         <div class="modal-footer">
           
           <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-          <%= f.submit "登録する", class:"btn btn-success", onClick="return check();" %>
+          <%= f.submit "登録する", class:"btn btn-success", id: 'schedule-button'%>
         </div>
         <% end %>
       </div>
@@ -36,15 +36,19 @@
   </div>
 </div>
 
-<script type="text/javascript">
-            function check(){
-                if (content_form.content.value == ""){
+<script >
+  window.scheduleContent = document.getElementById('schedule_content')
+            const button_activation = () => {
+        if (scheduleContent.value === '') {
+            scheduleButton.classList.add('disabled')
+          } else {
+            scheduleButton.classList.remove('disabled')
             
-                    alert("入力して下さい");
-                    return false;  
-                }else{
-                   
-                    return true; 
-                }
-            }
+        }
+    }
+
+    // フォームに入力した際の動作
+    scheduleContent.addEventListener('input', () => {
+        button_activation()
+    })
         </script>
