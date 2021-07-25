@@ -21,7 +21,7 @@ class SchedulesController < ApplicationController
     if @schedule.save
       redirect_to schedules_path
     else
-      render :index
+      render 'index'
     end
     # current_user.schedules.create!(schedule_params)
     # @schedules = Schedule.all
