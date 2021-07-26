@@ -25,12 +25,15 @@
 </footer>
 
 <script>
-  const messageContent = document.getElementById('message_content')
+  const messageContent = document.getElementById('message_content');
+  const imgName = document.getElementById('img_name')
   const messageButton = document.getElementById('message-button');
   messageContent.addEventListener('input', () => {
-        if (messageContent.value === '') {
+        if (messageContent.value === '' && imgName.value ==='') {
             messageButton.disabled = true;
-          } else {
+        }else if(messageContent.value === '' && imgName.value ===''){
+          messageButton.disabled = true;
+        } else {
             messageButton.disabled = false;
             // img_name.value ='';
             
