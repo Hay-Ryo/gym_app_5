@@ -2,7 +2,7 @@
   <%= form_with model: @message, local: true do |f| %>
   <div class="form-group">
     <!-- ここは自動的に message_content というidが付く。 -->
-    <%= f.text_area :content, class: 'form-control', rows: '1', maxlength: '500' %>
+    <%= f.text_area :content, class: 'form-control', rows: '1', maxlength: '500' id: 'msg_Content'%>
   </div>
   <div class="form-group">
     <div class="dropdown">
@@ -25,14 +25,14 @@
 </footer>
 
 <script>
-  // const messageContent = document.getElementById('message_content');
+  const msgContent = document.getElementById('msg_Content');
   const imgName = document.getElementById('img_name')
   const messageButton = document.getElementById('message-button');
   
-  messageContent.addEventListener('input', () => {
-    if (messageContent.value === '' && imgName.value ==='') {
+  msgContent.addEventListener('input', () => {
+    if (msgContent.value === '' && imgName.value ==='') {
       messageButton.disabled = true;
-    }else if(messageContent.value === '' && imgName.value ===''){
+    }else if(msgContent.value === '' && imgName.value ===''){
       messageButton.disabled = true;
     } else {
       messageButton.disabled = false;
@@ -40,9 +40,9 @@
     }
   });
   imgName.addEventListener('input', () => {
-    if (messageContent.value === '' && imgName.value ==='') {
+    if (msgContentt.value === '' && imgName.value ==='') {
       messageButton.disabled = true;
-    }else if(messageContent.value === '' && imgName.value ===''){
+    }else if(msgContent.value === '' && imgName.value ===''){
       messageButton.disabled = true;
     } else {
       messageButton.disabled = false;
