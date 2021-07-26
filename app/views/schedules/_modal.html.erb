@@ -50,15 +50,34 @@ scheduleContent.addEventListener("keyup", () => {
    // 成功した場合は、disabledをfalseに
    scheduleButton.disabled = true;
    
- }else if(scheduleContent.value === ''){
+ }else if(scheduleContent.value === '' || scheduleTitle.value === ''){
   scheduleButton.disabled = true;
 
-  }else if(scheduleTitle.value === ''){
-    scheduleButton.disabled = true;
+  // }else if(scheduleTitle.value === ''){
+    // scheduleButton.disabled = true;
 
   }else {
    // 失敗した場合は、disabledをtrueに
    scheduleButton.disabled = false;
  }
 });
+
+scheduleTitle.addEventListener("keyup", () => {
+ // inputの中身を正規表現でチェック
+ if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
+   // 成功した場合は、disabledをfalseに
+   scheduleButton.disabled = true;
+   
+ }else if(scheduleContent.value === '' || scheduleTitle.value === ''){
+  scheduleButton.disabled = true;
+
+  // }else if(scheduleTitle.value === ''){
+    // scheduleButton.disabled = true;
+
+  }else {
+   // 失敗した場合は、disabledをtrueに
+   scheduleButton.disabled = false;
+ }
+});
+
         </script>
