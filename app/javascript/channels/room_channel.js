@@ -42,25 +42,25 @@ const documentElement = document.documentElement
     const messageButton = document.getElementById('message-button')
 
     // 空欄でなければボタンを有効化，空欄なら無効化する関数
-    const button_activation = () => {
-        if (messageContent.value === '') {
-            messageButton.classList.add('disabled')
-          } else {
-            messageButton.classList.remove('disabled')
-            img_name.value =''
+    // const button_activation = () => {
+    //     if (messageContent.value === '') {
+    //         messageButton.classList.add('disabled')
+    //       } else {
+    //         messageButton.classList.remove('disabled')
+    //         img_name.value =''
             
-        }
-    }
+    //     }
+    // }
 
     // フォームに入力した際の動作
     messageContent.addEventListener('input', () => {
-        button_activation()
+        // button_activation()
         changeLineCheck()
     })
 
     // 送信ボタンが押された時にボタンを無効化し，フォーム行数を１に戻す
     messageButton.addEventListener('click', () => {
-        messageButton.classList.add('disabled')
+        // messageButton.classList.add('disabled')
         changeLineCount(1)
         
     })
