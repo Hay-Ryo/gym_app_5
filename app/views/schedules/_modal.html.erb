@@ -40,7 +40,8 @@
   const scheduleTitle = document.getElementById('schedule_title');
   const scheduleContent = document.getElementById('schedule_content');
   const scheduleButton = document.getElementById('schedule-button');
-
+  
+// タイトル、内容の順に入力する想定で、内容入力時に発火するにしている
   scheduleContent.addEventListener("keyup", () => {
 
     if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
@@ -55,7 +56,7 @@
       scheduleButton.disabled = false;
     }
   });
-
+// タイトル、内容の順に入力した後、タイトルだけを消した時にdisableを付与するため記述
   scheduleTitle.addEventListener("keyup", () => {
 
     if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
@@ -68,6 +69,6 @@
 
       scheduleButton.disabled = false;
     }
-});
+  });
 
 </script>

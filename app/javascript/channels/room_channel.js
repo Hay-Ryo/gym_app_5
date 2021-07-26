@@ -60,7 +60,7 @@ const documentElement = document.documentElement
 
     // 送信ボタンが押された時にボタンを無効化し，フォーム行数を１に戻す
     messageButton.addEventListener('click', () => {
-        messageButton.classList.add('disabled')
+        messageButton.disabled = true;
         changeLineCount(1)
         
     })
