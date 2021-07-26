@@ -28,7 +28,7 @@
         <div class="modal-footer">
           
           <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-          <%= f.submit "登録する", class:"btn btn-success", id: 'schedule-button'%>
+          <%= f.submit "登録する", class:"btn btn-success", id: 'schedule-button', disabled %>
         </div>
         <% end %>
       </div>
@@ -44,7 +44,7 @@
 
 
 // keyupイベントを拾う
-scheduleContent.addEventListener("submit", () => {
+scheduleContent.addEventListener("keyup", () => {
  // inputの中身を正規表現でチェック
  if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
    // 成功した場合は、disabledをfalseに
