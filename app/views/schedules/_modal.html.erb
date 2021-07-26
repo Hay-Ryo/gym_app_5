@@ -44,7 +44,7 @@
 
 
 // keyupイベントを拾う
-scheduleContent.addEventListener("keyup", () => {
+scheduleContent.addEventListener("load", () => {
  // inputの中身を正規表現でチェック
  if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
    // 成功した場合は、disabledをfalseに
