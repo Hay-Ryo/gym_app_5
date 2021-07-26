@@ -40,44 +40,34 @@
   const scheduleTitle = document.getElementById('schedule_title');
   const scheduleContent = document.getElementById('schedule_content');
   const scheduleButton = document.getElementById('schedule-button');
-// const p = document.querySelector("#helper-text");
 
+  scheduleContent.addEventListener("keyup", () => {
 
-// keyupイベントを拾う
-scheduleContent.addEventListener("keyup", () => {
- // inputの中身を正規表現でチェック
- if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
-   // 成功した場合は、disabledをfalseに
-   scheduleButton.disabled = true;
-   
- }else if(scheduleContent.value === '' || scheduleTitle.value === ''){
-  scheduleButton.disabled = true;
+    if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
 
-  // }else if(scheduleTitle.value === ''){
-    // scheduleButton.disabled = true;
+      scheduleButton.disabled = true;
 
-  }else {
-   // 失敗した場合は、disabledをtrueに
-   scheduleButton.disabled = false;
- }
+    }else if(scheduleContent.value === '' || scheduleTitle.value === ''){
+      scheduleButton.disabled = true;
+
+    }else {
+
+      scheduleButton.disabled = false;
+    }
+  });
+
+  scheduleTitle.addEventListener("keyup", () => {
+
+    if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
+      scheduleButton.disabled = true;
+  
+    }else if(scheduleContent.value === '' || scheduleTitle.value === ''){
+      scheduleButton.disabled = true;
+
+    }else {
+
+      scheduleButton.disabled = false;
+    }
 });
 
-scheduleTitle.addEventListener("keyup", () => {
- // inputの中身を正規表現でチェック
- if (scheduleContent.value === '' && scheduleTitle.value === '' ) {
-   // 成功した場合は、disabledをfalseに
-   scheduleButton.disabled = true;
-   
- }else if(scheduleContent.value === '' || scheduleTitle.value === ''){
-  scheduleButton.disabled = true;
-
-  // }else if(scheduleTitle.value === ''){
-    // scheduleButton.disabled = true;
-
-  }else {
-   // 失敗した場合は、disabledをtrueに
-   scheduleButton.disabled = false;
- }
-});
-
-        </script>
+</script>

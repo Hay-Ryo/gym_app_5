@@ -44,10 +44,10 @@ const documentElement = document.documentElement
     // 空欄でなければボタンを有効化，空欄なら無効化する関数
     const button_activation = () => {
         if (messageContent.value === '') {
-            messageButton.classList.add('disabled')
+            messageButton.disabled = true;
           } else {
-            messageButton.classList.remove('disabled')
-            img_name.value =''
+            messageButton.disabled = false;
+            // img_name.value ='';
             
         }
     }
