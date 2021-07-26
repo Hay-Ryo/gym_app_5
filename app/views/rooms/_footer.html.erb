@@ -60,6 +60,7 @@
         // ファイルサイズが制限以上
         alert('ファイルサイズは1MB以下にしてください'); // エラーメッセージを表示
         fileInput.value = ''; // inputの中身をリセット
+        messageButton.disabled = true;
         return; // この時点で処理を終了する
       }
     }
