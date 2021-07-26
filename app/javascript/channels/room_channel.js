@@ -42,7 +42,7 @@ const documentElement = document.documentElement
     const messageButton = document.getElementById('message-button')
 
     // 空欄でなければボタンを有効化，空欄なら無効化する関数
-    const button_activation = () => {
+      button_activation = () => {
         if (messageContent.value === '') {
             messageButton.disabled = true;
           } else {
