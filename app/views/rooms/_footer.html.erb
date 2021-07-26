@@ -25,6 +25,17 @@
 </footer>
 
 <script>
+  const messageButton = document.getElementById('message-button');
+  messageContent.addEventListener('input', () => {
+        if (messageContent.value === '') {
+            messageButton.disabled = true;
+          } else {
+            messageButton.disabled = false;
+            // img_name.value ='';
+            
+        }
+    });
+
 // 1MB以上のイメージはアラート出す
   let sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
 　const fileInput = document.getElementById('img_name'); // input要素

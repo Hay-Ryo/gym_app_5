@@ -42,12 +42,12 @@ const documentElement = document.documentElement
     const messageButton = document.getElementById('message-button')
 
     // 空欄でなければボタンを有効化，空欄なら無効化する関数
-      button_activation = () => {
+    const button_activation = () => {
         if (messageContent.value === '') {
-            messageButton.disabled = true;
+            messageButton.classList.add('disabled')
           } else {
-            messageButton.disabled = false;
-            // img_name.value ='';
+            messageButton.classList.remove('disabled')
+            img_name.value =''
             
         }
     }
@@ -60,7 +60,7 @@ const documentElement = document.documentElement
 
     // 送信ボタンが押された時にボタンを無効化し，フォーム行数を１に戻す
     messageButton.addEventListener('click', () => {
-        messageButton.disabled = true;
+        messageButton.classList.add('disabled')
         changeLineCount(1)
         
     })
