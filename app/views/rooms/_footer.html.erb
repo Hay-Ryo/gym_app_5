@@ -29,6 +29,7 @@
   const imgName = document.getElementById('img_name')
   const messageButton = document.getElementById('message-button');
   
+  // メッセージ入力したら、送信押せるようにする
   msgContent.addEventListener('input', () => {
     if (msgContent.value === '' && imgName.value ==='') {
       messageButton.disabled = true;
@@ -39,6 +40,8 @@
             // img_name.value ='';        
     }
   });
+
+  // 画像選択のみでも、送信押せるようにする
   imgName.addEventListener('input', () => {
     if (msgContent.value === '' && imgName.value ==='') {
       messageButton.disabled = true;

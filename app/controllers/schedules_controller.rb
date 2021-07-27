@@ -5,10 +5,6 @@ class SchedulesController < ApplicationController
     @schedule = current_user.schedules.build
   end
 
-  # def new
-  #   @schedule = current_user.schedules.new
-  # end
-
   def show
     @schedules = Schedule.all
     @schedule = current_user.schedules.build
@@ -17,12 +13,6 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    #  @schedule = current_user.schedules.new(schedule_params)
-    # if @schedule.save
-    #   redirect_to schedules_path
-    # else
-    #   render '/schedules'
-    # end
     current_user.schedules.create!(schedule_params)
     @schedules = Schedule.all
     redirect_to schedules_path
