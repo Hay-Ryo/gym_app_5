@@ -15,6 +15,6 @@ require( "bootstrap/dist/js/bootstrap")
 window.$ = jQuery;
 
 $(function(){
-  setTimeout("$('.flash').fadeOut('slow')", 3000);
+  setTimeout("$('.flash').fadeOut('slow')", 2000);
 });
 

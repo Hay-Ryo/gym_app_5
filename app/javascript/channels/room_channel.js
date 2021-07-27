@@ -53,10 +53,10 @@ const documentElement = document.documentElement
     // }
 
     // フォームに入力した際の動作
-    messageContent.addEventListener('input', () => {
-        // button_activation()
-        changeLineCheck()
-    })
+    // messageContent.addEventListener('input', () => {
+    //     // button_activation()
+    //     changeLineCheck()
+    // })
 
     // 送信ボタンが押された時にボタンを無効化し，フォーム行数を１に戻す
     messageButton.addEventListener('click', () => {
