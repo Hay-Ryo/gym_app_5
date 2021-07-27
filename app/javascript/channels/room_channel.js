@@ -41,7 +41,7 @@ const documentElement = document.documentElement
 
     const messageButton = document.getElementById('message-button')
 
-    // 非同期チャット用
+    // 非同期チャット
     // 空欄でなければボタンを有効化，空欄なら無効化する関数
     // const button_activation = () => {
     //     if (messageContent.value === '') {
@@ -69,9 +69,9 @@ const documentElement = document.documentElement
     const maxLineCount = 10
 
     // 入力メッセージの行数を調べる関数
-    // const getLineCount = () => {
-    //     return (messageContent.value + '\n').match(/\r?\n/g).length;
-    // }
+    const getLineCount = () => {
+        return (messageContent.value + '\n').match(/\r?\n/g).length;
+    }
 
     let lineCount = getLineCount()
     let newLineCount
@@ -91,8 +91,7 @@ const documentElement = document.documentElement
 
     const changeLineCount = (newLineCount) => {
         // フォームの行数を変更
-        // messageContent.rows = 
-        lineCount = newLineCount
+        messageContent.rows = lineCount = newLineCount
         // 新しいフッターの高さを取得し，違いを計算
         newFooterHeight = footer.scrollHeight
         footerHeightDiff = newFooterHeight - footerHeight
