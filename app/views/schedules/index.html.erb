@@ -12,6 +12,15 @@
     </div>
   <% end %>
   <% end %>
+    <div class="w-100 mb-3 ">
+      <% @schedules.each do |schedules| %>
+        <p class="card-text">
+        日程: <%= l @schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %>
+        <%=schedules.id%>
+        <%= link_to schedule.title,"/schedules/#{schedule.id}" %>
+        </p>
+      <% end %>
+    </div>
 </div>
 
 <%= render 'modal' %>

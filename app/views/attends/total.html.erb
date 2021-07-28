@@ -10,12 +10,10 @@
 <%end%>
 
 <div class="schedule-wrapper col-12">
-  <!-- <div class="schedule-header">
- -->    <%= month_calendar events: @attend_name do |date,attends| %>
-      <%= date.day %>
-  <!-- </div>
- -->
-      <% attends.each do |attend| %>
+  <%= month_calendar events: @attend_name do |date,attends| %>
+    <%= date.day %>
+
+   <% attends.each do |attend| %>
       <div class="attend-name">
         <% if attend.user_name==nil%>
           <P class="mb-0 mt-0">ユーザー</P>
@@ -23,6 +21,6 @@
           <%= attend.user_name %>
         <% end %>
       </div>
-      <% end %>
     <% end %>
+  <% end %>
 </div>
