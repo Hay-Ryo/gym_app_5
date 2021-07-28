@@ -1,77 +1,77 @@
 <div class="message" id="message-<%= message.id %>">
   <div class="msg-container" style="background-color:<%= message.user.color %>">
-<%# 自分のコメント %>
+    <%# 自分のコメント %>
     <% if current_user.id==message.user.id %>
-      <div class="msg-own">
-        <div class="user-img">
-          <% if current_user.img? %>
-      　　  <img src="<%= message.user.img %>">
-    　　   <% else %>
-      　　   <%= image_tag asset_path("IMG_3001.jpg") %>
-    　　   <% end %>
-        </div>
-          <div class="msg-info">
-            <p><%= message.id %>. <%= message.user.user_name %> :
-            <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %></p>
-<%# ユーザーカラーの分別 %>
+    <div class="msg-own">
+      <div class="user-img">
+        <% if current_user.img? %>
+        <img src="<%= message.user.img %>">
+        <% else %>
+        <%= image_tag asset_path("IMG_3001.jpg") %>
+        <% end %>
+      </div>
+      <div class="msg-info">
+        <p><%= message.id %>. <%= message.user.user_name %> :
+          <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %></p>
+        <%# ユーザーカラーの分別 %>
         <% if message.user.color==nil %>
-          <div class="msg-text">
-            <p style="background-color:#edf1ee">
-<%# 自分の投稿は消せるようにする %>
-              <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
-              <div><%= simple_format(h(message.content)) %></div>
-              <% end %>
-            </p>
-          </div>
-          <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
-            <div><%= image_tag message.img.url if message.img? %></div>
-          <%end%>
+        <div class="msg-text">
+          <p style="background-color:#edf1ee">
+            <%# 自分の投稿は消せるようにする %>
+            <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
+            <div><%= simple_format(h(message.content)) %></div>
+            <% end %>
+          </p>
+        </div>
+        <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
+        <div><%= image_tag message.img.url if message.img? %></div>
+        <%end%>
         <%else%>
-          <div class="msg-text">
-            <p style="background-color:<%= message.user.color %>">
-              <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
-                <div><%= simple_format(h(message.content)) %></div>
-              <% end %>
-            </p>
-          </div>
-          <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
-            <div><%= image_tag message.img.url if message.img? %></div>
-          <%end%>
+        <div class="msg-text">
+          <p style="background-color:<%= message.user.color %>">
+            <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
+            <div><%= simple_format(h(message.content)) %></div>
+            <% end %>
+          </p>
+        </div>
+        <%= link_to("/messages/#{message.id}", method: :delete, class: "mt-2", data: { confirm: "メッセージを削除しますか？" }) do %>
+        <div><%= image_tag message.img.url if message.img? %></div>
+        <%end%>
         <%end%>
       </div>
     </div>
     <%else%>
-<%# 自分以外のユーザーのコメント %>
-      <div class="msg-other">
-        <div class="user-img">
-          <% if message.user.img? %>
-      　　  <img src="<%= message.user.img %>">
-    　　  <% else %>
-      　　  <%= image_tag asset_path("IMG_3001.jpg") %>
-    　　  <% end %>
-        </div>
-        <div class="msg-info">
-          <p><%= message.id %>. <%= message.user.user_name %> :
-            <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %>
-          </p>
-<%# ユーザーカラーの分別 %>
-          <% if message.user.color == nil %>
-            <div class="msg-text" style="background-color:#edf1ee">
-              <span>
-                <%= simple_format(h(message.content)) %>
-              </span>
-            </div>
-            <div><%= image_tag message.img.url if message.img?%></div>
-          <%else%>
-            <div class="msg-text" class="msg-inner" style="background-color:<%= message.user.color %>">
-              <span>
-                <%= simple_format(h(message.content)) %>
-              </span>
-            </div>
-              <div><%= image_tag message.img.url if message.img?%></div>
-          <%end%>
-        </div>
+    <%# 自分以外のユーザーのコメント %>
+    <div class="msg-other">
+      <div class="user-img">
+        <% if message.user.img? %>
+          <img src="<%= message.user.img %>">
+         <% else %>
+           <%= image_tag asset_path("IMG_3001.jpg") %>
+         <% end %>
       </div>
+      <div class="msg-info">
+        <p><%= message.id %>. <%= message.user.user_name %> :
+          <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %>
+        </p>
+        <%# ユーザーカラーの分別 %>
+        <% if message.user.color == nil %>
+        <div class="msg-text" style="background-color:#edf1ee">
+          <span>
+            <%= simple_format(h(message.content)) %>
+          </span>
+        </div>
+        <div><%= image_tag message.img.url if message.img?%></div>
+        <%else%>
+        <div class="msg-text" class="msg-inner" style="background-color:<%= message.user.color %>">
+          <span>
+            <%= simple_format(h(message.content)) %>
+          </span>
+        </div>
+        <div><%= image_tag message.img.url if message.img?%></div>
+        <%end%>
+      </div>
+    </div>
     <%end%>
   </div>
 </div>

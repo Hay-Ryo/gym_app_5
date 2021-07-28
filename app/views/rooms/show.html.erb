@@ -1,18 +1,21 @@
 <div class="message-wrapper">
   <div id="message-container">
     <%= render @messages %>
+    <div class="attend-more">
+    <%= link_to_next_page @messages, 'もっと見る', remote: true, id: 'view_more' %>
+    </div>
   </div>
   <%= render 'footer' %>
 </div>
+
+ <%# メッセージの読み込み %>
+<% if @messages.present? %>
+showAdditionally = true
+<% end %>
 
 <script>
 var messageHeight = messageContainer.scrollHeight
 messageContainer.insertAdjacentHTML('afterbegin', "<%= j(render @messages) %>")
 var newMessageHeight = messageContainer.scrollHeight
 window.scrollBy(0, newMessageHeight - messageHeight)
-
-<%# メッセージの読み込み %>
-<% if @messages.present? %>
-showAdditionally = true
-<% end %>
 </script>
