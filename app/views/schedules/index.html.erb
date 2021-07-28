@@ -12,13 +12,15 @@
   </div>
   <% end %>
   <% end %>
-  <div class="w-100 mb-3 ">
+  <div class="card w-100 mb-3 ">
     <% @schedules.each do |schedule| %>
+    <%if schedule.created_at.since(1.minute) < Date.current %>
     <p class="card-text">
       日程: <%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %>
       <%=schedule.id%>
       <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
     </p>
+    <% end %>
     <% end %>
   </div>
 </div>
