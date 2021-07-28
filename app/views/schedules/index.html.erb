@@ -13,7 +13,7 @@
   <% end %>
   <% end %>
 
-<%if schedule.created_at > Time.current-3.minute %>
+<%if @schedule.created_at > Time.current-3.minute %>
     <% @schedules.each do |schedule| %>
    <%if schedule.created_at < Time.current-1.minute %>
     <div class="card sch-card">

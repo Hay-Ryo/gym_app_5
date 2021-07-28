@@ -4,15 +4,3 @@
   </div>
   <%= render 'footer' %>
 </div>
-
- <%# メッセージの読み込み %>
-<% if @messages.present? %>
-showAdditionally = true
-<% end %>
-
-<script>
-var messageHeight = messageContainer.scrollHeight
-messageContainer.insertAdjacentHTML('afterbegin', "<%= j(render @messages) %>")
-var newMessageHeight = messageContainer.scrollHeight
-window.scrollBy(0, newMessageHeight - messageHeight)
-</script>
