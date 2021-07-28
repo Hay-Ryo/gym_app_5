@@ -14,7 +14,7 @@
   <% end %>
 
     <% @schedules.each do |schedule| %>
-   <%if @schedules.created_at > Time.current-2.minute %>
+   <%if @schedule.created_at > Time.current-2.minute %>
   <div class="card sch-card">
       <p class="card-text">
         <%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %> 
