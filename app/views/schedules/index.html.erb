@@ -13,7 +13,7 @@
   <% end %>
   <% end %>
 
-   <%if schedule.created_at > Time.current-2.minute %>
+   <%if @schedules.created_at > Time.current-2.minute %>
     <% @schedules.each do |schedule| %>
   <div class="card sch-card">
       <p class="card-text">
@@ -21,12 +21,19 @@
         <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
       </p>
   </div>
-    <%else schedule.created_at > Time.current-1.minute%>
+    <%elsif schedule.created_at > Time.current-1.minute%>
     <div class="card sch-card">
       <p class="card-text">
       <span class="new-card">NEW</span><%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %>  
       <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
     </p>
+  </div>
+    <% else %>
+    <div class="card sch-card">
+      <p class="card-text">
+        <%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %> 
+        <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
+      </p>
   </div>
     <% end %>
     <% end %>
