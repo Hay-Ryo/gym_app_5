@@ -15,9 +15,9 @@
   <div class="w-100 mb-3 ">
     <% @schedules.each do |schedule| %>
     <p class="card-text">
-      日程: <%= l @schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %>
+      日程: <%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %>
       <%=schedule.id%>
-      <%= link_to schedule.title,"/schedules/#{schedule.id}" %>
+      <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
     </p>
     <% end %>
   </div>
