@@ -6,19 +6,14 @@
       <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
     </p>
   </div>
-<%elsif schedule.created_at > Time.current-2.minute %>
+<%else%>
     <div class="card sch-card">
       <p class="card-text">
         <%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %> 
         <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
       </p>
   </div>
-    <% else %>
-    <div class="card sch-card">
-      <p class="card-text">
-    <%= render 'schedule_more' %>
-    </p>
-  </div>
+    
     
 
     <% end %>
