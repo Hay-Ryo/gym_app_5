@@ -12,23 +12,16 @@
   </div>
   <% end %>
   <% end %>
+  <div class="sch-display">
+    <div id="schedule_list">
+      <%= render 'index'%>
+    </div>
 
-  <div id="schedule_list">
-    <%= render 'index'%>
+    <div class="schedule-more">
+      <%= link_to_next_page @schedules_show, 'もっと見る', remote: true, id: 'display_more' %>
+    </div>
   </div>
-
-
-
-  <div class="schedule-more">
-    <%= link_to_next_page @schedules_show, 'もっと見る', remote: true, id: 'display_more' %>
-  </div>
-    
+  
 </div>
 
 <%= render 'modal' %>
-<%# 
-    <div class="card sch-card">
-      <p class="card-text">
-    <%= render 'schedule_more' %>
-    <%# </p> %>
-  <%# </div>  %>

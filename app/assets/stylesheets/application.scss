@@ -635,6 +635,8 @@ input[type="color"] {
 .schedule-wrapper{
   max-width: 768px;
   margin: 0 auto;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -651,7 +653,24 @@ input[type="color"] {
   width: 100%;
   padding:1rem;
 }
+.sch-card a{
+  margin-left: 1rem;
+}
 
+// .schedule-more {
+//   width: 50%;
+//   text-align: center;
+//   margin: 0 atuo;
+//   padding-top: 0.5rem;
+//   background-color: bisque;
+// }
+.schedule-display > .schedule-more {
+  width: 50%;
+  text-align: center;
+  margin: 0 atuo;
+  padding-top: 0.5rem;
+  background-color: bisque;
+}
 .new-card{
   margin-right: 0.5rem;
   color: #e4e00d;
