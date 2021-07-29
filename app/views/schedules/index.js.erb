@@ -1,0 +1,4 @@
+<%# jQueryを使用 %>
+$('#schedule_list').append("<%= escape_javascript(render 'display_more', object: @schedules_show) %>");
+$("#display_more").replaceWith("<%= escape_javascript( 
+link_to_next_page(@schedules_show, 'もっと見る', remote: true, id: 'display_more')) %>");

@@ -13,8 +13,7 @@
   <% end %>
   <% end %>
 
-<%if @schedule.created_at > Time.current-3.minute %>
-    <% @schedules.each do |schedule| %>
+    <% @schedules_show.each do |schedule| %>
    <%if schedule.created_at < Time.current-1.minute %>
     <div class="card sch-card">
       <p class="card-text">
@@ -22,14 +21,21 @@
       <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
     </p>
   </div>
-    <% else %>
+<%elsif schedule.created_at > Time.current-2.minute %>
     <div class="card sch-card">
       <p class="card-text">
         <%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %> 
         <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
       </p>
   </div>
-    <% end %>
+    <% else %>
+    <div id="schedule_list">
+    <%= render 'schedule_more' %>
+    </div>
+    <div class="schedule-more">
+    <%= link_to_next_page schedule, 'もっと見る', remote: true, id: 'display_more' %>
+    </div>
+
     <% end %>
     <% end %>
 </div>

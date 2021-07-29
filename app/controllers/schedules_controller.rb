@@ -2,6 +2,7 @@ class SchedulesController < ApplicationController
 
   def index
     @schedules = Schedule.all
+    @schedules_show = Schedule.all.page(params[:page]).per(1)
     @schedule = current_user.schedules.build
   end
 
