@@ -16,7 +16,7 @@ class AttendsController < ApplicationController
     @user_name = @user.user_name
     @attends = @user.attends.page(params[:page]).order(created_at: :desc)
     @attends_count = Attend.where(id: @attends).count
-    @month = (Time.current.beginning_of_month..Timecurrent.end_of_day).to_s
+    @month = (Time.current.beginning_of_month..Time.current.end_of_day).to_s
     @year = (Time.current.beginning_of_year..Time.current.end_of_year).to_s
     @month_counts = current_user.attends.where('created_at > ?', @month).count
     @year_counts = current_user.attends.where('created_at > ?', @year).count
