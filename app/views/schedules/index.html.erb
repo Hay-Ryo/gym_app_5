@@ -14,6 +14,10 @@
   <% end %>
 
   <%= render 'index'%>
+
+  <div class="schedule-more">
+    <%= link_to_next_page schedule, 'もっと見る', remote: true, id: 'display_more' %>
+  </div>
     
 </div>
 
