@@ -25,11 +25,11 @@
 </footer>
 
 <script>
-  const msgContent = document.getElementById('msg_Content');
-  const imgName = document.getElementById('img_name')
-  const messageButton = document.getElementById('message-button');
+  var msgContent = document.getElementById('msg_Content');
+  var imgName = document.getElementById('img_name')
+  var messageButton = document.getElementById('message-button');
   
-  // メッセージ入力したら、送信押せるようにする
+// メッセージ入力したら、送信押せるようにする
   msgContent.addEventListener('input', () => {
     if (msgContent.value === '' && imgName.value ==='') {
       messageButton.disabled = true;
@@ -41,7 +41,7 @@
     }
   });
 
-  // 画像選択のみでも、送信押せるようにする
+// 画像選択のみでも、送信押せるようにする
   imgName.addEventListener('input', () => {
     if (msgContent.value === '' && imgName.value ==='') {
       messageButton.disabled = true;
@@ -49,24 +49,29 @@
       messageButton.disabled = true;
     } else {
       messageButton.disabled = false;
-            // img_name.value ='';        
+      // img_name.value ='';        
     }
   });
 
 // 1MB以上のイメージはアラート出す
-  let sizeLimit = 1024 * 1024 * 1;　// 制限サイズ
-　const fileInput = document.getElementById('img_name'); // input要素
-　const handleFileSelect = () => {
-    const files = fileInput.files;
+  // 制限サイズ
+  var sizeLimit = 1024 * 1024 * 1;
+  // input要素
+  var fileInput = document.getElementById('img_name'); 
+  var handleFileSelect = () => {
+    var files = fileInput.files;
     for (let i = 0; i < files.length; i++) {
       if (files[i].size > sizeLimit) {
         // ファイルサイズが制限以上
-        alert('ファイルサイズは1MB以下にしてください'); // エラーメッセージを表示
-        fileInput.value = ''; // inputの中身をリセット
+        // エラーメッセージを表示
+        alert('ファイルサイズは1MB以下にしてください');
+        // inputの中身をリセットし、終了
+        fileInput.value = ''; 
         messageButton.disabled = true;
-        return; // この時点で処理を終了する
+        return; 
       }
     }
   }
+
   fileInput.addEventListener('change', handleFileSelect);
 </script>
