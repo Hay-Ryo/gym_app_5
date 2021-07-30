@@ -1,20 +1,17 @@
 <% @schedules_show.each do |schedule| %>
-   <%if schedule.created_at > Time.current-3.hour %>
+  <%if schedule.created_at > Time.current-3.hour %>
     <div class="card sch-card">
       <p class="card-text">
       <span class="new-card">NEW</span><%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %><br>
       <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
-    </p>
-  </div>
-<%else%>
+      </p>
+    </div>
+  <%else%>
     <div class="card sch-card">
       <p class="card-text">
         <%= l schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %><br>
         <%= link_to schedule.title, "/schedules/#{schedule.id}" %>
       </p>
-  </div>
-    
-    
-
-    <% end %>
-    <% end %>
+    </div>
+  <% end %>
+<% end %>

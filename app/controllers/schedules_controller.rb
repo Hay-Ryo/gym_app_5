@@ -10,7 +10,6 @@ class SchedulesController < ApplicationController
     @schedules = Schedule.all
     @schedule = current_user.schedules.build
     @schedule = Schedule.find_by(id: params[:id])
-    
   end
 
   def create
