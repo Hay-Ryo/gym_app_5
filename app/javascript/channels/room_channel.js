@@ -107,6 +107,8 @@ const documentElement = document.documentElement
     //     footerHeight = newFooterHeight
     // }
 
+// メッセージの追加読み込み
+
   let oldestMessageId
   // メッセージの追加読み込みを可否を決定する変数
   window.showAdditionally = true
