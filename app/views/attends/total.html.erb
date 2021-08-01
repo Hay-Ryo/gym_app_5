@@ -3,7 +3,7 @@
 </div>
 
 <% @day_name.each do |day_name|%>
-  <div class="card-header attend-wrapper" style="background-color:<%= attend.users.color>
+  <div class="card-header attend-wrapper" style="background-color:<%= attend.user.color%>" >
     <p><%=day_name.first %></p>
     <p><%=l day_name.second,format:'%Y年%-m月%-d日(%a) %H:%M'%></p>
   </div>
@@ -14,7 +14,7 @@
     <%= date.day %>
 
    <% attends.each do |attend| %>
-      <div class="attend-name">
+      <div class="attend-name" style="background-color:<%= attend.user.color%>">
         <% if attend.user_name==nil%>
           <P class="mb-0 mt-0">ユーザー</P>
         <% else %>
