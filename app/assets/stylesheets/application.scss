@@ -507,9 +507,14 @@ input[type="color"] {
   // color: gold;
 }
 
+.attend-list{
+  border-radius: 10px;
+}
+
 .attend-list h5{
   margin: 0;
 }
+
 .attend-more{
   margin-top: 1rem;
   font-weight: bold;
@@ -527,6 +532,12 @@ input[type="color"] {
 .attend-name {
   margin-bottom: 2px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  .attend-name a{
+    font-size:18px;
+  }
 }
 
 .btn-color{
@@ -609,12 +620,6 @@ input[type="color"] {
   background-color: #505050;
 }
 
-@media screen and (max-width: 768px){
-  .attend-name-font{
-    font-size:10px;
-  }
-}
-
 // スケジュール
 // カレンダー
 .wday-0{
@@ -692,6 +697,11 @@ input[type="color"] {
   }
 }
 
+.schedule-title {
+  margin-bottom: 2px;
+  text-align: center;
+}
+
 .schedule-title a{
   width: 100%;
   display: block;
@@ -701,9 +711,11 @@ input[type="color"] {
   color:rgb(67, 70, 67);
   background-color: rgb(152, 243, 205);
 }
-.schedule-title {
-  margin-bottom: 2px;
-  text-align: center;
+
+@media screen and (min-width: 768px){
+  .attend-name a{
+    font-size:18px;
+  }
 }
 
 .edit-btn{
