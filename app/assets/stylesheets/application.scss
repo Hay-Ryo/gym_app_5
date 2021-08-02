@@ -20,7 +20,7 @@
 
 // ヘッダー
 .sticky-top{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 0 auto;
   background-color: #50ABA2;
 }
@@ -144,7 +144,7 @@
 
 // フラッシュメッセージ
 .alert-success{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .alert-secondary{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -163,7 +163,7 @@ footer {
   position: fixed;
   bottom:-20px;
   width: 100%;
-  max-width: 768px;
+  max-width: 1000px;
   padding: 0.5rem;
   background-color: white;
   margin-bottom: 1rem;
@@ -191,12 +191,12 @@ footer {
   text-decoration: none;
 }
 .message-wrapper{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 #message-container {
-  max-width: 768px;
+  max-width: 1000px;
   padding: 1rem 1rem 1rem 1rem;
   background-color: #d4e3fe;;
 }
@@ -326,7 +326,7 @@ footer {
 
 // ログイン
 .login-wrapper{
-  max-width: 768px;
+  max-width: 1000px;
   width: 90%;
   margin: 10px auto;
   padding: 20px 30px;
@@ -349,7 +349,7 @@ footer {
 }
 // 新規登録
 .signup-wrapper{
-  max-width: 768px;
+  max-width: 1000px;
   width: 90%;
   margin: 10px auto;
   padding: 20px 30px;
@@ -381,7 +381,7 @@ footer {
 
 // ユーザーインデックス
 .users-index {
-  max-width: 768px;
+  max-width: 1000px;
   width: 90%;
   margin: 7px auto;
   margin-bottom: 10px;
@@ -396,7 +396,7 @@ footer {
   font-size: 20px;
 }
 .users-list {
-  max-width: 768px;
+  max-width: 1000px;
   width: 90%;
   display: table;
   margin: 0 auto;
@@ -418,7 +418,7 @@ input[type="color"] {
   width:70%;
 }
 .user-edit-wrapper{
-  max-width: 768px;
+  max-width: 1000px;
   width: 95%;
   margin: 7px auto;
   padding: 10px 25px;
@@ -429,8 +429,7 @@ input[type="color"] {
 }
 
 .login-wrapper{
-  color: #584f4f;
-  max-width: 768px;
+  max-width: 1000px;
   width: 90%;
   margin: 10px auto;
   padding: 10px 25px;
@@ -438,6 +437,7 @@ input[type="color"] {
   text-align: center;
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
+  color: #584f4f;
 }
 
 .login-checkbox input[type="checkbox"]{
@@ -450,7 +450,7 @@ input[type="color"] {
 }
 
 .attend-wrapper{
-  max-width: 768px;
+  max-width: 1000px;
   width: 90%;
   margin: 0 auto;
   padding: 5px;
@@ -472,7 +472,7 @@ input[type="color"] {
 }
 
 .attend-top{
-  max-width: 768px;
+  max-width: 1000px;
   width: 90%;
   margin: 0 auto;
   padding: 20px 20px;
@@ -489,7 +489,7 @@ input[type="color"] {
 }
 
 .attend-container{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 10px auto;
   text-align: center;
 }
@@ -609,6 +609,12 @@ input[type="color"] {
   background-color: #505050;
 }
 
+@media screen and (max-width: 768px){
+  .attend-name-font{
+    font-size:10px;
+  }
+}
+
 // スケジュール
 // カレンダー
 .wday-0{
@@ -620,7 +626,7 @@ input[type="color"] {
 }
 
 .calendar-heading{
-  max-width: 768px;
+  max-width: 1000px;
   font-weight: 500;
   margin: 0 auto;
   margin-top: 10px;
@@ -637,7 +643,7 @@ input[type="color"] {
 }
 
 .schedule-wrapper{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 1rem;
   padding-top: 0.5rem;
@@ -648,7 +654,7 @@ input[type="color"] {
 }
 
 .schedule-header{
-  max-width: 768px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
@@ -669,7 +675,7 @@ input[type="color"] {
 }
 
 .schedule-form{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-left: 10px;
   box-shadow: 0px 2px 10px #c1ced7;
@@ -759,7 +765,7 @@ input[type="color"] {
 
 // タスク
 .task-wrapper{
-  max-width: 768px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 

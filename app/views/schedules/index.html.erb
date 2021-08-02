@@ -8,7 +8,7 @@
   <%= date.day %>
   <% schedules.each do |schedule| %>
   <div class="schedule-title">
-    <%= link_to schedule.title.slice(0..2),"/schedules/#{schedule.id}" %>
+    <%= link_to schedule.title.slice(0..3),"/schedules/#{schedule.id}" %>
   </div>
   <% end %>
   <% end %>
