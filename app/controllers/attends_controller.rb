@@ -26,14 +26,14 @@ class AttendsController < ApplicationController
     @user = current_user
     @user_name=@user.user_name
 # 今日の初めから終わり
-    @day = (Time.now.beginning_of_day..Time.now.end_of_day).to_s
+    @day = (Time.current.beginning_of_day..Time.current.end_of_day).to_s
 # 今月の初めから終わり
     @month = (Time.current.beginning_of_month..Time.current.end_of_day).to_s
 # 今年の初めから終わり 
     @year = (Time.current.beginning_of_year..Time.current.end_of_year).to_s
 # 今日の参加人数
-    @day_counts= Attend.where('created_at > ?', @day).count
-    # @day_counts= Attend.where(created_at: Time.current.beginning_of_day..Time.current.end_of_day).count
+    # @day_counts= Attend.where('created_at > ?', @day).count
+    @day_counts= Attend.where(created_at: Time.current.beginning_of_day..Time.current.end_of_day).count
 # 今月の総回数
     @month_counts= @user.attends.where('created_at > ?', @month).count
 # 今年の総回数
