@@ -26,7 +26,7 @@ class AttendsController < ApplicationController
     @user = current_user
     @user_name=@user.user_name
 # 今日の初めから終わり
-    @day = Time.current.beginning_of_day..Time.current.end_of_day
+    @day = (Time.current.all_day).to_s
 # 今月の初めから終わり
     @month = (Time.current.beginning_of_month..Time.current.end_of_day).to_s
 # 今年の初めから終わり 
@@ -40,6 +40,7 @@ class AttendsController < ApplicationController
     @year_counts= @user.attends.where('created_at > ?', @year).count
 # 本日の出席者の:user_nameだけを抽出
     @day_name= Attend.where('created_at > ?', @day).pluck(:user_name,:created_at)
+    
     @attend_name= Attend.all
   end
 
