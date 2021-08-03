@@ -12,31 +12,31 @@
                     <small>更新日:
                         <%= l @schedule.updated_at, format: '%Y年%-m月%-d日(%a)%H:%M' %></small>
                 </p>
-                <div class="card-header">
+                <div class="card-header card-inner">
                     <p class="card-text">
                         日程: <%= l @schedule.start_time, format: '%Y年%-m月%-d日(%a)%H:%M' %>
                     </p>
                 </div>
-                <div class="card-header">
+                <div class="card-header card-inner">
                     <p class="card-text">
                         <%= @schedule.title %>
                     </p>
                 </div>
-                <div class="card-header">
+                <div class="card-header card-inner">
                     <p class="card-text">
                         <%= simple_format @schedule.content %></p>
                 </div>
                 <%if @schedule.user.id==current_user.id %>
                 <div class="schedule-btn">
                     <button type="button"
-                    class="btn btn-warning btn-sm mt-1"><%= link_to("編集",edit_schedule_path)%></button>
+                        class="btn btn-warning btn-sm mt-1"><%= link_to("編集",edit_schedule_path)%></button>
                     <button type="button"
-                    class="btn btn-secondary  btn-sm mt-1"><%= link_to("削除",schedule_path, method: "delete", data: { confirm: "このスケジュールを削除しますか？"} )%></button>
+                        class="btn btn-secondary  btn-sm mt-1"><%= link_to("削除",schedule_path, method: "delete", data: { confirm: "このスケジュールを削除しますか？"} )%></button>
                 </div>
                 <%else%>
                 <div class="schedule-btn">
                     <button type="button"
-                    class="btn btn-primary btn-sm mt-1"><%= link_to("編集",edit_schedule_path)%></button>
+                        class="btn btn-primary btn-sm mt-1"><%= link_to("編集",edit_schedule_path)%></button>
                 </div>
                 <%end%>
             </div>

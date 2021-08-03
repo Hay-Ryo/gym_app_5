@@ -712,10 +712,8 @@ input[type="color"] {
   background-color: rgb(152, 243, 205);
 }
 
-@media screen and (min-width: 768px){
-  .attend-name a{
-    font-size:18px;
-  }
+.card-inner{
+  border-radius:5px;
 }
 
 .edit-btn{
