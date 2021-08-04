@@ -1,9 +1,11 @@
 <div class="task-wrapper pb-1">
   <div class="task-container col-12 ">
     <div class="card mb-1 status-container" id="task-complete">
+    <%# タスクステータス %>
       <%= render 'likes/status', tasks_count: @tasks_count, complete: @complete, uncomplete: @uncomplete %>
     </div>
     <div class="w-100 mb-3 tasks ">
+    <%# タスク内容 %>
       <% @tasks.each do |task| %>
       <%if task.user_id == current_user.id%>
       <div class="card mb-1 task-text">

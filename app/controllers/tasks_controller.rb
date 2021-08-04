@@ -11,7 +11,7 @@ class TasksController < ApplicationController
 
   def create
     current_user.tasks.create!(task_params)
-    @tasks = Task.includes(:user).all
+    @tasks = Task.includes(:user).all.order(created_at: :desc)
     @tasks_count = current_user.tasks.count.to_f
     @complete = current_user.likes.count.to_f
     @uncomplete = @complete / @tasks_count *100
