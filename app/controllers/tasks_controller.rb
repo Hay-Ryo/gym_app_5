@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
   def index
     @task = current_user.tasks.build
-    @tasks = Task.includes(:user).all
+    @tasks = Task.includes(:user).all.order(created_at: :desc)
 #タスク数、達成率表示のため
     @tasks_count = current_user.tasks.count.to_f
     @complete = current_user.likes.count.to_f
