@@ -820,8 +820,8 @@ input[type="color"] {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 1.0rem 0.8rem;
-  // padding: 0.01rem 0.4rem;
+  padding: 0.5rem 0.8rem;
+  // padding: 0.rem 0.4rem;
 }
 
 @media screen and (min-width: 900px){
@@ -865,8 +865,7 @@ input[type="color"] {
 }
 }
 
-
-
+// ヘッダーボタンのアニメーション
 @media screen and (max-width: 768px){
 .anime-set{
   opacity: 0;
@@ -890,7 +889,6 @@ input[type="color"] {
     transform: translateX(0);
   }
   }
-
 .delay-in1{
   animation-delay: 0.1s;
 }
@@ -902,6 +900,9 @@ input[type="color"] {
 }
 .delay-in4{
   animation-delay: 0.4s;
+}
+.delay-in5{
+  animation-delay: 0.5s;
 }
 
 }
