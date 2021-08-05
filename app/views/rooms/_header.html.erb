@@ -15,22 +15,22 @@
       <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to '出席表', "/attends", class: 'navbar-brand nav-link text-white w-100' %>
+            <%= link_to '出席表', "/attends", class: 'navbar-brand nav-link text-white w-100 anime-set fadein delay-in' %>
           </li>
           <li class="nav-item active">
-            <%= link_to "チャット", "/rooms/#{current_user.id}", class: 'navbar-brand nav-link text-white w-100'%>
+            <%= link_to "チャット", "/rooms/#{current_user.id}", class: 'navbar-brand nav-link text-white w-100 anime-set fadeIn delay-in'%>
           </li>
           <li class="nav-item active">
-            <%= link_to "スケジュール",schedules_path ,class: 'navbar-brand nav-link text-white w-100' %>
+            <%= link_to "スケジュール",schedules_path ,class: 'navbar-brand nav-link text-white w-100 anime-set fadeIn delay-in1' %>
           </li>
-          <li class="nav-item active"><%= link_to "タスク",tasks_path, class: 'navbar-brand nav-link text-white w-100' %>
+          <li class="nav-item active"><%= link_to "タスク",tasks_path, class: 'navbar-brand nav-link text-white w-100 anime-set fadeIn delay-in2' %>
           </li>
 
           <li class="nav-item active">
-            <%= link_to 'ユーザー編集', edit_user_registration_path, class: 'navbar-brand nav-link text-white w-100' %>
+            <%= link_to 'ユーザー編集', edit_user_registration_path, class: 'navbar-brand nav-link text-white w-100 anime-set fadeIn delay-in3' %>
           </li>
           <li class="nav-item active text-white">
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link text-white w-100'%>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link text-white w-100 anime-set fadeIn delay-in4'%>
           </li>
         <% else %>
           <li class="nav-item active">

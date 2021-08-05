@@ -24,7 +24,7 @@
   margin: 0 auto;
   background-color: #50ABA2;
 }
- 
+
  // ヘッダーボタン
 .navbar-light .navbar-toggler{
   border-color: rgba(255, 255, 255, 0.5);
@@ -37,16 +37,16 @@
   text-decoration: none;
   list-style: none;
 }
- 
+
 .fa-home{
   color: #ffffff;
 }
- 
+
 .icon-size{
   font-size: 50px;
   color: #50ABA2;
 }
- 
+
 .main-menu >.card-group > li:hover {
   background-color: #50ABA2;
   transition: all 0.3s;
@@ -55,11 +55,11 @@
     color: #ffffff;
   }
 }
- 
+
 .main-menu >.card-group > li :hover {
   color: #ffffff;
 }
- 
+
 .navbar-collapse >.navbar-nav > li :hover {
   opacity: 0.5;
   transition: all 0.3s;
@@ -80,7 +80,7 @@
     border-bottom-right-radius: 10px;
   }
 }
- 
+
 .navbar-brand a:hover{
   opacity: 0.5;
   background-color: #ebebeb;
@@ -804,6 +804,7 @@ input[type="color"] {
 
 .add-btn{
   line-height: 2.9rem;
+  
 }
 
 .btn-position{
@@ -819,7 +820,8 @@ input[type="color"] {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.01rem 0.4rem;
+  padding: 1.0rem 0.8rem;
+  // padding: 0.01rem 0.4rem;
 }
 
 @media screen and (min-width: 900px){
@@ -861,4 +863,45 @@ input[type="color"] {
   opacity: 0.9;
   z-index: 10000;
 }
+}
+
+
+
+@media screen and (max-width: 768px){
+.anime-set{
+  opacity: 0;
+}
+
+.fadeIn{
+  opacity: 0;
+  animation-name:fadeInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+} 
+
+@keyframes fadeInAnime{
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  }
+
+.delay-in1{
+  animation-delay: 0.1s;
+}
+.delay-in2{
+  animation-delay: 0.2s;
+}
+.delay-in3{
+  animation-delay: 0.3s;
+}
+.delay-in4{
+  animation-delay: 0.4s;
+}
+
 }
