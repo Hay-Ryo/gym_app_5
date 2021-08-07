@@ -6,7 +6,7 @@ class Attend < ApplicationRecord
   validate :check_business_hours
 
 	def non_business_hours 
-    Time.current.beginning_of_day..Time.current.beginning_of_day.15.hours
+    Time.current.beginning_of_day..Time.current.since(16.hour)
 	end
 
 	def check_business_hours
