@@ -67,10 +67,9 @@ class AttendsController < ApplicationController
     redirect_to attend_path
   end
 
-def detail
-@attend = Attend.find_by(id: params[:id])
-
-end
+  def detail
+    @attend = Attend.find_by(id: params[:id])
+  end
 
 
 end
