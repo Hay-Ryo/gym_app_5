@@ -11,5 +11,6 @@ class Attend < ApplicationRecord
 
 	def check_business_hours
 		Attend.where(start_time: non_business_hours)
+		flash[:msg]= "営業時間外です"
 	end 
 end
