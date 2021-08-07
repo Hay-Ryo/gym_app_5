@@ -55,7 +55,8 @@ class AttendsController < ApplicationController
       redirect_to("/attends/#{@user}")
       flash[:notice]='出席しました'
     else
-      redirect_to root_path, flash: {msg: "営業時間外です"}
+      redirect_to root_path
+      flash[:msg]= "営業時間外です"
     end
   end
 
