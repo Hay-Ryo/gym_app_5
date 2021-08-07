@@ -11,7 +11,7 @@ class Attend < ApplicationRecord
 
 	def check_business_hours
 		if Attend.where(created_at: non_business_hours)
-			errors.add(:non_business_hours, "は営業時間外です")
+			redirect_to root_path, flash: {msg: "営業時間外です"}
 		end
 	end 
 end

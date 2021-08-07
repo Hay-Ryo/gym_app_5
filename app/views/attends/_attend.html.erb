@@ -20,7 +20,7 @@
     <h3>その調子！</h3>
     <h4>Month <%=@month_counts%> 回</h4>
     <h4>Year <%=@year_counts%> 回</h4>
-<%elsif @month_counts == 1%>
+<%elsif @month_counts == 0 || 1%>
     <h3>今月の目標を考えよう</h3>
     <h4>Month <%=@month_counts%> 回</h4>
     <h4>Year <%=@year_counts%> 回</h4>
