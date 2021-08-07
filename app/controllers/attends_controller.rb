@@ -53,10 +53,10 @@ class AttendsController < ApplicationController
     )
     if @attend.save
       redirect_to("/attends/#{@user}")
+      flash[:notice]='出席しました'
     else
-      render("/attends/#{@user}")
+      redirect_to root_path, flash: {msg: "営業時間外です"}
     end
-    flash[:notice]='出席しました'
   end
 
   def destroy
