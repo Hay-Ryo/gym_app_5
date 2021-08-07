@@ -40,7 +40,7 @@ class AttendsController < ApplicationController
     @year_counts= @user.attends.where('created_at > ?', @year).count
 # 本日の出席者の:user_nameだけを抽出
     @day_name= Attend.where('created_at > ?', @day).pluck(:user_name,:created_at)
-    
+
     @attend_name= Attend.all
   end
 
@@ -65,5 +65,11 @@ class AttendsController < ApplicationController
     flash[:alert]='出席を削除しました'
     redirect_to attend_path
   end
+
+def detail
+@attend = Attend.find_by(id: params[:id])
+
+end
+
 
 end

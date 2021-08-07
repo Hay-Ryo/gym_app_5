@@ -19,7 +19,8 @@
     <P class="mb-0 mt-0">ユーザー</P>
     <% else %>
     <div>
-      <%= attend.user_name %>
+      <%# <%= attend.user_name %> 
+      <%= link_to attend.user_name,"/attends/#{attend.id}" %>
     </div>
     <% end %>
   </div>

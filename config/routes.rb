@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   # totalを上に書く
   get "/attends/total" => "attends#total"
+  get "/attends/:id" => "attends#detail"
   resources :attends 
   post "/attends/:id/create"=> "attends#create"
 
