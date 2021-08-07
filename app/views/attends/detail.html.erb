@@ -1,26 +1,26 @@
-<div class="schedule-wrapper">
-    <div class="schedule-header">
-        <div class="card">
-            <div class="card-body">
+<div class="attend-detail">
+  <div class="detail-wrapper">
+    <div class="card">
+      <div class="card-body">
 
-                <div class="card-header card-inner">
-                    <p class="card-text">
-                        日程: <%= l @attend.created_at, format: '%Y年%-m月%-d日(%a)%H:%M' %>
-                    </p>
-                </div>
-                <div class="card-header card-inner">
-                    <p class="card-text">
-                        <%= @attend.user_name %>
-                    </p>
-                </div>
-
-                <%if @attend.user.id==current_user.id %>
-                <div class="schedule-btn">
-                    <button type="button"
-                        class="btn btn-secondary  btn-sm mt-1"><%= link_to("削除",attend_path, method: "delete", data: { confirm: "この出席を削除しますか？"} )%></button>
-                </div>
-                <%end%>
-            </div>
+        <div class="card-header card-inner">
+          <p class="card-text">
+            <%= l @attend.created_at, format: '%Y年%-m月%-d日(%a)%H:%M' %>
+          </p>
         </div>
+        <div class="card-header card-inner">
+          <p class="card-text">
+            <%= @attend.user_name %>
+          </p>
+        </div>
+
+        <%if @attend.user.id==current_user.id %>
+        <div class="schedule-btn">
+          <button type="button"
+            class="btn btn-secondary  btn-sm mt-1"><%= link_to("削除",attend_path, method: "delete", data: { confirm: "この出席を削除しますか？"} )%></button>
+        </div>
+        <%end%>
+      </div>
     </div>
+  </div>
 </div>

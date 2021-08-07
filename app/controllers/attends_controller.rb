@@ -38,8 +38,8 @@ class AttendsController < ApplicationController
     @month_counts= @user.attends.where('created_at > ?', @month).count
 # 今年の総回数
     @year_counts= @user.attends.where('created_at > ?', @year).count
-# 本日の出席者の:user_nameだけを抽出
-    @day_name= Attend.where('created_at > ?', @day).pluck(:user_name,:created_at)
+# 仕様変更 本日の出席者の:user_nameだけを抽出 
+    # @day_name= Attend.where('created_at > ?', @day).pluck(:user_name,:created_at)
 
     @attend_name= Attend.all
   end

@@ -533,6 +533,10 @@ input[type="color"] {
   margin-bottom: 2px;
   text-align: center;
 }
+.attend-name a{
+  color: #434643;
+  font-weight: bold;
+}
 
 @media screen and (min-width: 768px){
   .attend-name{
@@ -618,6 +622,21 @@ input[type="color"] {
   opacity:0.9;
   color: white;
   background-color: #505050;
+}
+.attend-detail{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-shadow: 0px 1px 3px #c1ced7;
+}
+
+.detail-wrapper{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 // スケジュール
