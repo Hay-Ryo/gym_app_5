@@ -926,7 +926,8 @@ input[type="color"] {
 
 }
 
-.business{
+.closed-hours{
   opacity: 0.5;
-  background-color: darkgray;
+  background-color: rgb(177, 175, 175);
+  pointer-events: none;
 }

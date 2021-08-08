@@ -10,8 +10,8 @@
   
   <div class="main-menu">
     <ul class="card-group">
-      <li class="card attend_btn">
-      <%= link_to(attends_path, class: "atd_btn", method: :post,data: { confirm: "出席しますか？" }) do %>
+      <li class="card close-time">
+      <%= link_to(attends_path, class: "attend_btn", method: :post,data: { confirm: "出席しますか？" }) do %>
         <span><i class="fas fa-user-check icon-size"></i></span>
         出席
       </li>
@@ -76,15 +76,14 @@
 <%end%>
 
 <script>
-    const attendBtn = document.getElementsByClassName('attend_btn');
     const currentTime = new Date().getHours();
-    const atdBtn = document.getElementsByClassName('atd_btn')
+    var closeTime = document.getElementsByClassName('close-time');
+    var attendBtn = document.getElementsByClassName('attend_btn')
 
     window.addEventListener('load',()=>{
     if (0 <= currentTime && currentTime <= 23){
-        // attendBtn[0].classList.add('business');
-      attendBtn[0].classList.add('business');
-      atdBtn[0].disabled = true;
+      closeTime[0].classList.add('closed-hours');
+      attendBtn[0].disabled = true;
     }
 });
 </script>
