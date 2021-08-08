@@ -79,7 +79,7 @@
     var attendBtn = document.getElementsByClassName('attend_btn');
     var currentTime = new Date().getHours();
 
-    attendBtn.addEventListener(load,()=>{
+    attendBtn.addEventListener('load',()=>{
     if ( 0 <= currentTime && currentTime <= 18 ){
         attendBtn.classList.add('business');
     }
