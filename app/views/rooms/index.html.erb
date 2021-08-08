@@ -76,14 +76,14 @@
 <%end%>
 
 <script>
-    var attendBtn = document.getElementsByClassName('attend_btn');
-    var currentTime = new Date().getHours();
+    const attendBtn = document.getElementsByClassName('attend_btn');
+    const currentTime = new Date().getHours();
 
-    attendBtn[0].addEventListener('load',()=>{
-    if ( 0 <= currentTime && currentTime <= 23 ){
+    window.addEventListener('load',()=>{
+    if (0 <= currentTime && currentTime <= 23){
         // attendBtn[0].classList.add('business');
-        attendBtn[0].classList.add('business')
-        attendBtn[0].disabled == true;
+      attendBtn[0].classList.add('business');
+      attendBtn[0].disabled = true;
     }
 });
 </script>
