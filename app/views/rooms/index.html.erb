@@ -76,11 +76,12 @@
 <%end%>
 
 <script>
-$(function(){
     var attendBtn = document.getElementsByClassName('attend_btn');
     var currentTime = new Date().getHours();
+
+    attendBtn.addEventListener(load,()=>{
     if ( 0 <= currentTime && currentTime <= 18 ){
-        $('attendBtn').addClass('business');
+        attendBtn.classList.add('business');
     }
 });
 </script>
