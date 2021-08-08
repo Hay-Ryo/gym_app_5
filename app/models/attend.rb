@@ -10,7 +10,7 @@ class Attend < ApplicationRecord
 	end
 
 	def check_business_hours
-		Attend.where(created_at: Time.current.beginning_of_day..Time.current.beginning_of_day.since(20.hour))
+		Attend.where(created_at: Time.current.beginning_of_day..Time.current.beginning_of_day.since(9.hour))
 		# flash[:msg]= "営業時間外です"
 	end 
 end
