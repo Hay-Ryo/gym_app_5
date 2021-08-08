@@ -10,7 +10,7 @@
   
   <div class="main-menu">
     <ul class="card-group">
-      <li class="card">
+      <li class="card attend_btn">
       <%= link_to(attends_path, method: :post,data: { confirm: "出席しますか？" }) do %>
         <span><i class="fas fa-user-check icon-size"></i></span>
         出席
@@ -74,3 +74,13 @@
 <%end%>
 
 <%end%>
+
+<script>
+$(function(){
+    var attendBtn = document.getElementsByClassName('attend_btn');
+    var currentTime = new Date().getHours();
+    if ( 0 <= currentTime && currentTime <= 18 ){
+        $('attendBtn').addClass('business');
+    }
+});
+</script>
