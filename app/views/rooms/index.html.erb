@@ -80,8 +80,10 @@
     var currentTime = new Date().getHours();
 
     attendBtn[0].addEventListener('load',()=>{
-    if ( 0 <= currentTime && currentTime <= 19 ){
-        attendBtn[0].classList.add('business');
+    if ( 0 <= currentTime && currentTime <= 23 ){
+        // attendBtn[0].classList.add('business');
+        attendBtn[0].classList.add('business')
+        attendBtn[0].disabled == true;
     }
 });
 </script>
