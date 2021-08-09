@@ -76,6 +76,7 @@
 <%end%>
 
 <script>
+// 営業時間外は出席ボタンを押せないようにする
     var currentTime = new Date().getHours();
     var closeTime = document.getElementsByClassName('close-time');
     var attendBtn = document.getElementsByClassName('attend_btn')

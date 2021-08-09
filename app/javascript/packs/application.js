@@ -18,3 +18,16 @@ $(function(){
   setTimeout("$('.flash').fadeOut('slow')", 2000);
 });
 
+
+// 営業時間外は出席ボタンを押せないようにする
+    var currentTime = new Date().getHours();
+    var closeTime = document.getElementsByClassName('close-time');
+    var attendBtn = document.getElementsByClassName('attend_btn')
+
+    window.addEventListener('load',()=>{
+    if (0 <= currentTime && currentTime <= 23){
+      closeTime[0].classList.add('closed-hours');
+      attendBtn[0].disabled = true;
+    }
+});
+
