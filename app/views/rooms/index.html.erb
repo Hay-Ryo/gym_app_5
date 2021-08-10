@@ -80,16 +80,16 @@
     var currentTime = new Date().getHours();
     var closeTime = document.getElementsByClassName('close-time');
     var attendBtn = document.getElementsByClassName('attend_btn')
-
+// 営業時間外にページがロードされた時の処理
     window.addEventListener('load',()=>{
-    if (0 <= currentTime && currentTime <= 23){
+    if (0 <= currentTime && currentTime <= 8){
       closeTime[0].classList.add('closed-hours');
       attendBtn[0].disabled = true;
     }
 });
-
+// 営業時間外に出席ボタンを押した時の処理
     attendBtn[0].addEventListener('click',()=>{
-    if (0 <= currentTime && currentTime <= 23){
+    if (0 <= currentTime && currentTime <= 8){
       alert('営業時間外です')
       closeTime[0].classList.add('closed-hours');
       attendBtn[0].disabled = true;
