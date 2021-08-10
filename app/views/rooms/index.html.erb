@@ -81,9 +81,8 @@
     var closeTime = document.getElementsByClassName('close-time');
     var attendBtn = document.getElementsByClassName('attend_btn')
 
-    window.addEventListener('DOMContentLoaded	',()=>{
+    window.addEventListener('load',()=>{
     if (0 <= currentTime && currentTime <= 23){
-      alert('営業時間外です')
       closeTime[0].classList.add('closed-hours');
       attendBtn[0].disabled = true;
     }
