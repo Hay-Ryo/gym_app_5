@@ -926,8 +926,29 @@ input[type="color"] {
 
 }
 
+// 営業時間外のボタンスタイル
 .closed-hours{
   opacity: 0.5;
   background-color: rgb(177, 175, 175);
   pointer-events: none;
+}
+
+// サイトアクセス時のトップ画面
+.top-img{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.1;
+  transition:0.5s;
+}
+
+.top-def{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  height: 0.1;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 10000;
 }

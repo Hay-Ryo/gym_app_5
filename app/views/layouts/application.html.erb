@@ -13,6 +13,7 @@
   </head>
 
   <body>
+  <%= image_tag asset_path("IMG_7626.jpg"), id: "top_img", class: "top-def" %>
     <%= render 'rooms/header' %>
     <% if flash[:notice] %>
       <div class="flash alert alert-success">
@@ -24,14 +25,15 @@
         <%= flash[:alert] %>
       </div>
     <% end %>
-    <% if flash[:msg] %>
-      <div class="flash alert alert-secondary flash-option">
-        <%= flash[:msg] %>
-      </div>
-    <% end %>
 
-
-    
     <%= yield %>
   </body>
 </html>
+
+<script>
+  window.setTimeout(()=>{
+    const topImg = document.getElementById('top_img')
+    topImg.classList.add('top-img');
+    topImg.classList.remove('top-def');
+  },1000);
+</script>
