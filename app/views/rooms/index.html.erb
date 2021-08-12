@@ -11,7 +11,7 @@
   <div class="main-menu">
     <ul class="card-group">
       <li class="card close-time">
-      <%= link_to(attends_path, class: "attend_btn", method: :post,data: { confirm: "出席しますか？" }) do %>
+      <%= link_to(attends_path, id: "attend_btn", method: :post,data: { confirm: "出席しますか？" }) do %>
         <span><i class="fas fa-user-check icon-size"></i></span>
         出席
       </li>
@@ -79,20 +79,20 @@
 // 営業時間外は出席ボタンを押せないようにする
     var currentTime = new Date().getHours();
     var closeTime = document.getElementsByClassName('close-time');
-    var attendBtn = document.getElementsByClassName('attend_btn')
+    var attendBtn = document.getElementById('attend_btn')
 // 営業時間外にページがロードされた時の処理
     window.addEventListener('load',()=>{
     if (0 <= currentTime && currentTime <= 8){
       closeTime[0].classList.add('closed-hours');
-      attendBtn[0].disabled = true;
+      attendBtn.disabled = true;
     }
 });
 // 営業時間外に出席ボタンを押した時の処理
-    attendBtn[0].addEventListener('click',()=>{
+    attendBtn.addEventListener('click',()=>{
     if (0 <= currentTime && currentTime <= 8){
       alert('営業時間外です')
       closeTime[0].classList.add('closed-hours');
-      attendBtn[0].disabled = true;
+      attendBtn.disabled = true;
     }
 });
 

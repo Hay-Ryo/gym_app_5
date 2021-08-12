@@ -1,3 +1,5 @@
+<%= image_tag asset_path("IMG_7626.jpg"), id: "top_img", class: "top-def" %>
+
 <div class="login-wrapper">
 <h2>ログイン</h2>
 
@@ -28,3 +30,10 @@
 <div class="login-footer">
  <%= render "devise/shared/links" %> 
 </div>
+<script>
+  window.setTimeout(()=>{
+    const topImg = document.getElementById('top_img')
+    topImg.classList.add('top-img');
+    topImg.classList.remove('top-def');
+  },1000);
+</script>

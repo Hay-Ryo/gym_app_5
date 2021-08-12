@@ -334,6 +334,7 @@ footer {
   text-align: center;
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
+  z-index: 10000;
 }
 
 .login-wrapper.field > label{
@@ -346,6 +347,7 @@ footer {
 
 .login-footer{
   text-align: center;
+  z-index: 10000;
 }
 // 新規登録
 .signup-wrapper{
@@ -941,6 +943,7 @@ input[type="color"] {
   opacity: 0.1;
   overflow: hidden;
   transition:0.5s;
+  z-index: -1;
 }
 
 .top-def{

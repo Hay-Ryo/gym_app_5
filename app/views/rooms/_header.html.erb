@@ -15,7 +15,7 @@
       <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to '出席表', "/attends", class: 'navbar-brand nav-link text-white w-100 anime-set fadeIn delay-in' %>
+            <%= link_to '出席表', "/attends",id: "attend_btn", class: 'navbar-brand nav-link text-white w-100 anime-set fadeIn delay-in' %>
           </li>
           <li class="nav-item active">
             <%= link_to "チャット", "/rooms/#{current_user.id}", class: 'navbar-brand nav-link text-white w-100 anime-set fadeIn delay-in1'%>
