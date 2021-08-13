@@ -2,7 +2,7 @@
   <h1 style="color:<%=current_user.color%>"><%= @user_name %></h1>
   <div class="attend-container">
 
-    <%= link_to(attends_path, method: :post, class: "btn btn-success btn-lg btn-block",data: { confirm: "出席しますか？" }) do %>
+    <%= link_to(attends_path, method: :post, id: "attend-btn", class: "btn btn-success btn-lg btn-block",data: { confirm: "出席しますか？" }) do %>
     <div>出席</div>
     <% end %>
     <%= link_to("/attends/#{@user.id}", class: "btn-color btn-lg btn-block mt-2") do %>
@@ -23,3 +23,26 @@
   </div>
   <%end%>
 </div>
+
+<script>
+// 営業時間外は出席ボタンを押せないようにする
+    var currentTime = new Date().getHours();
+    var closeTime = document.getElementsByClassName('close-time');
+    var attendBtn = document.getElementById('attend-btn')
+// 営業時間外にページがロードされた時の処理
+    window.addEventListener('load',()=>{
+    if (0 <= currentTime && currentTime <= 8){
+      closeTime[0].classList.add('closed-hours');
+      attendBtn.disabled = true;
+    }
+});
+// 営業時間外に出席ボタンを押した時の処理
+    attendBtn.addEventListener('click',()=>{
+    if (0 <= currentTime && currentTime <= 8){
+      alert('営業時間外です')
+      closeTime[0].classList.add('closed-hours');
+      attendBtn.disabled = true;
+    }
+});
+
+</script>
