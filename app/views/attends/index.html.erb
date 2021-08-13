@@ -31,14 +31,14 @@
     var attendBtn = document.getElementById('attend-btn')
 // 営業時間外にページがロードされた時の処理
     window.addEventListener('load',()=>{
-    if (0 <= currentTime && currentTime <= 8){
+    if (0 <= currentTime && currentTime <= 20){
       closeTime[0].classList.add('closed-hours');
       attendBtn.disabled = true;
     }
 });
 // 営業時間外に出席ボタンを押した時の処理
     attendBtn.addEventListener('click',()=>{
-    if (0 <= currentTime && currentTime <= 8){
+    if (0 <= currentTime && currentTime <= 20){
       alert('営業時間外です')
       closeTime[0].classList.add('closed-hours');
       attendBtn.disabled = true;
