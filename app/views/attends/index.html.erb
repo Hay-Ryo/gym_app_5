@@ -2,7 +2,7 @@
   <h1 style="color:<%=current_user.color%>"><%= @user_name %></h1>
   <div class="attend-container">
 
-    <%= link_to(attends_path, method: :post, id: "attend-btn", class: "btn btn-success btn-lg btn-block",data: { confirm: "出席しますか？" }) do %>
+    <%= link_to(attends_path, method: :post, id: "attend-btn", class: "btn btn-success btn-lg btn-block close-time",data: { confirm: "出席しますか？" }) do %>
     <div>出席</div>
     <% end %>
     <%= link_to("/attends/#{@user.id}", class: "btn-color btn-lg btn-block mt-2") do %>
