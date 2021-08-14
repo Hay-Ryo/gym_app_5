@@ -2,7 +2,7 @@
   <div id="task-<%= task.id %>">
     <div class="card-body task-complete">
       <p class="card-text"><%= l task.created_at, format: '%Y年%-m月%-d日(%a)' %></p>
-      <p class="card-text lead"><%= task
+      <p class="card-text task-title"><%= task
         .title %></p>
       <p class="card-text task-text"><%= simple_format(h(task.content)) %></p>
       <div class="task-btn">
@@ -19,7 +19,7 @@
   <div id="task-<%= task.id %>">
     <div class="card-body ">
       <p class="card-text"><%= l task.created_at, format: '%Y年%-m月%-d日(%a)' %></p>
-      <p class="card-text lead"><%= task
+      <p class="card-text task-title"><%= task
         .title %></p>
       <p class="card-text task-text "><%= simple_format(h(task.content)) %></p>
       <div class="task-btn">

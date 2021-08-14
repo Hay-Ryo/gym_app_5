@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   def create
     @message = current_user.messages.create!(message_params)
     redirect_to("/rooms/#{current_user.id}")
-    # 非同期の設定
+    # 非同期の設定（保留）
     # 投稿されたメッセージをチャット参加者に配信
     # ActionCable.server.broadcast 'room_channel',{message: @message.template}
   end

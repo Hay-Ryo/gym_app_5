@@ -46,9 +46,9 @@
       <div class="user-img">
         <% if message.user.img? %>
           <img src="<%= message.user.img %>">
-         <% else %>
-           <%= image_tag asset_path("IMG_3001.jpg") %>
-         <% end %>
+        <% else %>
+          <%= image_tag asset_path("IMG_3001.jpg") %>
+        <% end %>
       </div>
       <div class="msg-info">
         <p><%= message.id %>. <%= message.user.user_name %> :
