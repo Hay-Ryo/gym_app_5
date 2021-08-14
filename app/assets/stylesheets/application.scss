@@ -157,16 +157,15 @@
   border: 1px solid rgb(230, 230, 230);
 }
 
-// チャット
+// チャット関連
 // メッセージ投稿フォーム
 footer {
   position: fixed;
-  bottom:-20px;
-  width: 100%;
   max-width: 1000px;
+  width: 100%;
+  bottom: 0;
   padding: 0.5rem;
   background-color: white;
-  margin-bottom: 1rem;
 }
 
 .dropdown-menu{
@@ -180,7 +179,6 @@ footer {
 // メッセージ一覧
 .message-wrapper{
   max-width: 1000px;
-  height: 100vh;
   margin: 0 auto;
   background-color: #d4e3fe;;
 }
@@ -243,10 +241,9 @@ footer {
 }
 
 .msg-text{
-  max-width: 100%;
   position: relative;
+  width: 100%;
   padding: 7px 11px 8px;
-  border-radius: 8px;
   word-wrap: break-word;
   word-break: break-all;
 }
@@ -263,18 +260,6 @@ footer {
   height: 15rem;
   border-radius: 5%;
 }
-
-// .msg-img{
-//   width:100%;
-// }
-
-// .msg-inner{
-//   max-width: 60%;
-//   width: auto;
-//   padding: 7px 11px 8px;
-//   border-radius: 8px;
-//   position: relative;
-// }
 
 .others p {
   max-width: 250px;
@@ -510,7 +495,7 @@ input[type="color"] {
 }
 
 .attend-container h3{
-  padding: 1.0rem;
+  padding: 1rem;
   font-size: 1.4rem;
   opacity:0.9;
   box-shadow: 0 1px 6px #c1ced7;
@@ -889,7 +874,6 @@ input[type="color"] {
 // タブレットサイズまでの表示
 @media screen and (max-width: 768px){
 .flash-option{
-  // display: none;
   position: fixed;
   top: 0;
   width: 100%;

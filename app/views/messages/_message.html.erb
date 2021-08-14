@@ -63,7 +63,7 @@
         </div>
         <div><%= image_tag message.img.url if message.img?%></div>
         <%else%>
-        <div class="msg-text" class="msg-inner" style="background-color:<%= message.user.color %>">
+        <div class="msg-text" style="background-color:<%= message.user.color %>">
           <span>
             <%= simple_format(h(message.content)) %>
           </span>
