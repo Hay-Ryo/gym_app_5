@@ -30,6 +30,7 @@
     var closeTime = document.getElementsByClassName('close-time');
     var attendBtn = document.getElementById('attend-btn')
 // 営業時間外にページがロードされた時の処理
+// AM0:00からAM8:59は出席できない
     window.addEventListener('load',()=>{
     if (0 <= currentTime && currentTime <= 8){
       closeTime[0].classList.add('closed-hours');
