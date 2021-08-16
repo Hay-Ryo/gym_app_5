@@ -28,8 +28,8 @@ class SchedulesController < ApplicationController
     if @schedule.save
       redirect_to(schedule_path)
     else
-      render(schedule_path)
       flash[:alert]= '内容を変更しませんでした'
+      render(schedule_path)
     end
   end
 
