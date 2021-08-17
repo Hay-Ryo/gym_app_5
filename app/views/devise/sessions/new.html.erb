@@ -1,7 +1,6 @@
 <%= image_tag asset_path("IMG_7626.jpg"), id: "top_img", class: "top-def" %>
 
 <div class="login-wrapper">
-<%= render "devise/shared/error_messages", resource: resource %>
 <h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -17,7 +16,7 @@
 
   <% if devise_mapping.rememberable? %>
     <div class="field login-checkbox">
-      <p><%= f.check_box :remember_me %>記憶する</p>
+      <p><%= f.check_box :remember_me %>ログインを保持する</p>
       <%# <%= f.label :remember_me %> 
     </div>
   <% end %>
