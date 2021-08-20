@@ -325,11 +325,15 @@ footer {
 
 .login-wrapper .field input{
   width: 90%;
-  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid #71b398;
+}
+.login-wrapper .field input[type="submit"]{
+  background-color: #50ABA2;
 }
 
 .login-checkbox input[type="checkbox"]{
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .login-footer{
