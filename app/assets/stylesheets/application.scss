@@ -91,14 +91,15 @@ footer{
   max-width: none !important;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
-  }
+  padding: 0 !important;
+}
+
 .footer-bottom{
+  margin: 0;
   padding: 5px 0;
-  background-color: #476F5F;
   text-align: center;
   font-size: 12px;
-  font-style: normal;
+  background-color: #476F5F;
   color: #fff;
 }
 // フラッシュメッセージ
