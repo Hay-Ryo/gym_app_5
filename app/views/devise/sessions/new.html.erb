@@ -1,9 +1,9 @@
 <%= image_tag asset_path("IMG_7626.jpg"), id: "top_img", class: "top-def" %>
 
 <div class="login-wrapper">
-<h2>ログイン</h2>
+  <h2>ログイン</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -15,25 +15,30 @@
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field login-checkbox">
-      <p><%= f.check_box :remember_me %>ログインを保持する</p>
-      <%# <%= f.label :remember_me %> 
-    </div>
+  <div class="field login-checkbox">
+    <p><%= f.check_box :remember_me %>ログインを保持する</p>
+    <%# <%= f.label :remember_me %>
+  </div>
   <% end %>
 
   <div class="actions">
     <%= f.submit "ログインする" %>
   </div>
-<% end %>
+  <% end %>
 </div>
 
 <div class="login-footer">
-  <%= render "devise/shared/links" %> 
+  <%= render "devise/shared/links" %>
 </div>
+
+<footer>
+  <address class="footer-bottom">© 2021 RYOGYMAPP All rights reserved.</address>
+</footer>
+
 <script>
-  window.setTimeout(()=>{
+  window.setTimeout(() => {
     const topImg = document.getElementById('top_img')
     topImg.classList.add('top-img');
     topImg.classList.remove('top-def');
-  },1000);
+  }, 1000);
 </script>

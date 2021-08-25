@@ -86,6 +86,21 @@
   }
 }
 
+// フッター
+footer{
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+
+  }
+.footer-bottom{
+  padding: 5px 0;
+  background-color: #476F5F;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  color: #fff;
+}
 // フラッシュメッセージ
 .alert-success{
   max-width: 1000px;
@@ -334,6 +349,7 @@ footer {
 
 .login-checkbox input[type="checkbox"]{
   width: 2.5rem;
+  border-bottom: 0px solid #71b398;
 }
 
 .login-footer{
