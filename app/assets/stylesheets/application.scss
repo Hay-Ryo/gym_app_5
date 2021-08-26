@@ -350,16 +350,19 @@ footer {
   // border-bottom: 3px solid #2E97FB;
 }
 
-.login-wrapper .field input[type="text"]{
+.login-wrapper .field input[type="email"],
+.login-wrapper .field input[type="password"]{
   /*線の基点とするためrelativeを指定*/
 position: relative;
 }
 
-.login-wrapper .field input[type="text"]:hover{
+.login-wrapper .field input[type="email"]:hover,
+.login-wrapper .field input[type="password"]:hover{
 color:#0481A2;
 }
 
-.login-wrapper .field input[type="text"]::after {
+.login-wrapper .field input[type="email"]::after,
+.login-wrapper .field input[type="password"]::after {
   content: '';
   /*絶対配置で線の位置を決める*/
   position: absolute;
@@ -376,8 +379,8 @@ color:#0481A2;
 }
 
 /*現在地とhoverの設定*/
-.login-wrapper .field input[type="text"]::after,
-.login-wrapper .field input[type="text"]::after {
+.login-wrapper .field input[type="email"]::after,
+.login-wrapper .field input[type="password"]::after {
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
