@@ -347,8 +347,41 @@ footer {
 
 .login-wrapper .field input:hover{
   outline: none;
-  border-bottom: 3px solid #2E97FB;
+  // border-bottom: 3px solid #2E97FB;
 }
+
+.login-wrapper .field input[type="text"]{
+  /*線の基点とするためrelativeを指定*/
+position: relative;
+}
+
+.login-wrapper .field input[type="text"]:hover{
+color:#0481A2;
+}
+
+.login-wrapper .field input[type="text"]::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background:#0481A2;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.login-wrapper .field input[type="text"]::after,
+.login-wrapper .field input[type="text"]::after {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
 
 .login-wrapper .field input[type="submit"]{
   background-color: #50ABA2;
