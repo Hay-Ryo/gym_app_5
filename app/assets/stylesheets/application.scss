@@ -350,7 +350,7 @@ footer {
   outline: none;
 }
 
-input[type="email"] ~ .focus_line {
+.focus-text ~ .focus_line {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -360,8 +360,8 @@ input[type="email"] ~ .focus_line {
     background-color: #da3c41;
   
 }
-.field:focus ~ .focus_line,
-.login-wrapper.field ~ .focus_line {
+.focus-text:focus ~ .focus_line,
+.login-wrapper .focus-text ~ .focus_line {
 	width: 100%;
 	transition: 0.4s;
 }
