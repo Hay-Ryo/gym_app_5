@@ -379,7 +379,7 @@ color:#0481A2;
 }
 
 /*現在地とhoverの設定*/
-.login-wrapper .field input[type="email"]::after,
+// .login-wrapper .field input[type="email"]::after,
 .login-wrapper .field input[type="password"]:hover::after {
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
