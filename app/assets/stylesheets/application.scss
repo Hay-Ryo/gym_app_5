@@ -360,6 +360,12 @@ input[type="email"] ~ .focus_line {
     background-color: #da3c41;
   
 }
+.field:focus ~ .focus_line,
+.login-wrapper.field ~ .focus_line {
+	width: 100%;
+	transition: 0.4s;
+}
+
 // input[type="email"]:focus {
 //   position: relative;
 //   bottom: 0px;
