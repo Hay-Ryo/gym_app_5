@@ -348,7 +348,7 @@ footer {
 .field input{
   position:relative;
 }
-.login-wrapper .field input:hover{
+.login-wrapper .field input:hover::after{
   // outline: none;
   background:#0481A2;
     /*アニメーションの指定*/
