@@ -345,7 +345,7 @@ footer {
   border-bottom: 2px solid #71b398;
 }
 
-.login-wrapper .field input:hover{
+.login-wrapper > .field input:hover{
   outline: none;
   // border-bottom: 3px solid #2E97FB;
 }
@@ -356,7 +356,7 @@ footer {
 position: relative;
 }
 
-.login-wrapper .field input[type="email"]:hover,
+.login-wrapper .field input[type="email"],
 .login-wrapper .field input[type="password"]:hover{
 color:#0481A2;
 }
@@ -380,7 +380,7 @@ color:#0481A2;
 
 /*現在地とhoverの設定*/
 .login-wrapper .field input[type="email"]::after,
-.login-wrapper .field input[type="password"]::after {
+.login-wrapper .field input[type="password"]:hover::after {
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
