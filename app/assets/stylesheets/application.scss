@@ -345,41 +345,19 @@ footer {
   border-bottom: 2px solid #71b398;
 }
 
-.field input:hover{
+.login-wrapper .field input:hover{
   outline: none;
+  transform: scale(1, 1);
+  background:#0481A2;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    border-bottom: 2px;
+    transform-origin: center top;
+    width: 80%;
+    height: 2px;
   // border-bottom: 3px solid #2E97FB;
 }
 
-.field input[type="email"]{
-  /*線の基点とするためrelativeを指定*/
-position: relative;
-}
-
-.field input[type="email"]:hover{
-color:#0481A2;
-}
-
-.field input[type="email"]::after{
-  content: '';
-  /*絶対配置で線の位置を決める*/
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  /*線の形状*/
-  width: 80%;
-  height: 2px;
-  background:#0481A2;
-  /*アニメーションの指定*/
-  transition: all .3s;
-  transform: scale(0, 1);/*X方向0、Y方向1*/
-  transform-origin: center top;/*上部中央基点*/
-}
-
-/*現在地とhoverの設定*/
-
-.field input[type="email"]:hover::after {
-  transform: scale(1, 1);/*X方向にスケール拡大*/
-}
 
 
 
