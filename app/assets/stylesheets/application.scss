@@ -350,6 +350,16 @@ footer {
   outline: none;
 }
 
+input[type="email"]:focus {
+  position: relative;
+  bottom: 0px;
+  content: "";
+  width: 100%;
+  background: #559585;
+  height: 25px;
+  border-radius: 10px;
+}
+
 .login-wrapper .field input[type="submit"]{
   background-color: #50ABA2;
 }
