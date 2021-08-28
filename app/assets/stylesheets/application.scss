@@ -344,37 +344,12 @@ footer {
   width: 90%;
   border: none;
   border-bottom: 2px solid #71b398;
+  border-radius: 0;
 }
 .login-wrapper .field input[type="email"],
 .login-wrapper .field input[type="password"]:hover{
   outline: none;
 }
-
-.focus-text ~ .focus_line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    transition: 0.4s;
-    background-color: #da3c41;
-  
-}
-.focus-text:focus ~ .focus_line,
-.login-wrapper .focus-text ~ .focus_line {
-	width: 100%;
-	transition: 0.4s;
-}
-
-// input[type="email"]:focus {
-//   position: relative;
-//   bottom: 0px;
-//   content: "";
-//   width: 100%;
-//   background: #559585;
-//   height: 25px;
-//   border-radius: 10px;
-// }
 
 .login-wrapper .field input[type="submit"]{
   background-color: #50ABA2;
