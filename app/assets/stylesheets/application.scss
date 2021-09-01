@@ -180,7 +180,7 @@ footer {
   max-width: 1000px;
   width: 100%;
   bottom: 0;
-  padding: 8rem;
+  padding: 128px;
   background-color: white;
 }
 
@@ -240,7 +240,7 @@ footer {
 // 他者のメッセージ
 .msg-other {
   display:flex;
-  margin: 0px 0;
+  margin: 0px;
   text-align: left;
 }
 
@@ -315,7 +315,7 @@ footer {
   width: 48px;
   height: 48px;
   padding: 0px;
-  margin: 8px ;
+  margin: 8px;
   border-radius: 50%;
   object-position: 50% 50%;
   overflow: hidden;
@@ -357,7 +357,7 @@ footer {
 }
 
 .login-checkbox input[type="checkbox"]{
-  width: 2.5rem;
+  width: 40px;
   border-bottom: 0px solid #71b398;
 }
 
@@ -385,7 +385,7 @@ footer {
 
 .signup-wrapper .actions input{
   width: 90%;
-  margin:10px;
+  margin: 10px;
   text-align: center;
   border-radius: 10px;
   color :white;
@@ -393,7 +393,7 @@ footer {
 
 #error_explanation{
   width: 90%;
-  margin:10px;
+  margin: 10px;
   text-align: center;
   font-size: small;
 }
@@ -603,17 +603,17 @@ footer {
 @keyframes perfect {
   0% {
     transform: scale(.3);
-    width:10%;
+    width: 10%;
   }
   50% {
     transform: scale(.6) rotate(-90deg);
     background: rgb(241, 4, 4);
-    width:200%;
+    width: 200%;
   }
   100% {
     transform: scale(1) rotate(360deg);
     background: rgb(219, 235, 7);
-    width:100%;
+    width: 100%;
   }
 
 }
@@ -623,19 +623,19 @@ footer {
 @keyframes excellent {
   0% {
     transform: scale(.3);
-    width:10%;
-    height:50%;
+    width: 10%;
+    height: 50%;
   }
   50% {
     transform: scale(.6) rotate(180deg);
     transform: scale(.6) rotate(180deg);
     background: rgb(241, 4, 4);
-    width:200%;
+    width: 200%;
   }
   100% {
     transform: scale(1) ;;
     background: rgb(219, 235, 7);
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -645,7 +645,7 @@ footer {
 @keyframes great {
   0% {
     transform: scale(.3);
-    width:10%;
+    width: 10%;
     
   }
   50% {
@@ -656,7 +656,7 @@ footer {
   100% {
     transform: scale(1) ;
     background: rgb(7, 235, 83);
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -664,7 +664,7 @@ footer {
   box-shadow: 0 1px 6px #c1ced7;
   border-radius: 10px;
   padding: 24px;
-  opacity:0.9;
+  opacity: 0.9;
   color: white;
   background-color: #505050;
 }
@@ -779,7 +779,7 @@ footer {
 }
 
 .card-inner{
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 .edit-btn{
