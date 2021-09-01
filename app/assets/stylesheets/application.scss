@@ -342,6 +342,7 @@ footer {
 .login-wrapper .field input[type="email"],
 .login-wrapper .field input[type="password"]{
   width: 90%;
+  padding-left: 5px;
   border: none;
   border-bottom: 2px solid #71b398;
   border-radius: 0;
@@ -403,6 +404,7 @@ footer {
 .signup-wrapper .field input[type="email"],
 .signup-wrapper .field input[type="password"]{
   width: 90%;
+  padding-left: 5px;
   border: none;
   border-bottom: 2px solid #71b398;
   border-radius: 0;
@@ -414,6 +416,12 @@ footer {
 
 .signup-wrapper input[type="submit"]{
   background-color: #50ABA2;
+}
+
+.new-color input[type="color"]{
+  width:70%;
+  border: none;
+  background-color: transparent;
 }
 
 // トップ画面の上部
@@ -456,24 +464,7 @@ footer {
 }
 
 // ユーザー編集
-.field{
-  margin-bottom: 5px;
-}
-
-.field input{
-  width:100%;
-}
-
-input[type="color"] {
-  width: 50%;
-  margin-bottom: 1rem;
-}
-
-.new-color input[type="color"]{
-  width:70%;
-}
-
-.user-edit-wrapper{
+.edit-wrapper{
   max-width: 1000px;
   width: 95%;
   margin: 7px auto;
@@ -482,6 +473,20 @@ input[type="color"] {
   text-align: center;
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
+}
+
+.edit-wrapper .field{
+  margin-bottom: 5px;
+}
+
+.edit-wrapper .field input{
+  width:90%;
+}
+
+.edit-wrapper input[type="color"] {
+  width: 70%;
+  margin-bottom: 16px;
+  background-color: #fff;
 }
 
 //attend 出席表 
