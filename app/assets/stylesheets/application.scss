@@ -353,7 +353,11 @@ footer {
 }
 
 .login-wrapper input[type="submit"]{
-  background-color: #50ABA2;
+  padding: 8px 65px;
+  border: none;
+  border-radius: 5px;
+  color: #3c3c3c;
+  background-color: #c8eae7;
 }
 
 .login-checkbox input[type="checkbox"]{
@@ -487,6 +491,14 @@ footer {
   width: 70%;
   margin-bottom: 16px;
   background-color: #fff;
+}
+
+.edit-wrapper input[type="submit"]{
+  padding: 8px 65px;
+  border: none;
+  border-radius: 5px;
+  color: #3c3c3c;
+  background-color: #c8eae7;
 }
 
 //attend 出席表 

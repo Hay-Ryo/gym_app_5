@@ -23,11 +23,11 @@
   <div class="field">
     <%= f.label :ユーザーカラー %><br />
     <input type="color" id="color-select2">
-    <%= f.text_field :color, autocomplete: "color",id: "color2" %>
+    <%= f.text_field :color, autocomplete: "color",id: "color2",placeholder: "上から選んでください" %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email",placeholder: "email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -35,23 +35,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(変更する場合は入力
-      )</i><br />
+    <%= f.label :password %> <i>(
+      変更の場合)</i>
     <% if @minimum_password_length %>
 
-    <em><%= @minimum_password_length %>文字以上</em>
+    <em><%= @minimum_password_length %>文字以上</em><br/>
     <% end %>
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password",placeholder: "password" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder: "password(確認用)" %>
   </div>
 
   <div class="field">
     <%= f.label :current_password %> <i>(入力し更新して下さい)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%= f.password_field :current_password, autocomplete: "current-password",placeholder: "現在のパスワードを入力し更新して下さい" %>
   </div>
 
   <div class="actions">
@@ -84,9 +84,9 @@ $(function () {
   }
   document.getElementById("color-select2").onchange = func2;
 
-  const limitSize = 1024 * 1024 * 1;　// 制限サイズ
-　const inputFile = document.getElementById('image'); // input要素
-　const fileSelectHandle = () => {
+  const limitSize = 1024 * 1024 * 1;// 制限サイズ
+  const inputFile = document.getElementById('image'); // input要素
+  const fileSelectHandle = () => {
     const file2 = inputFile.files;
     for (let i = 0; i < file2.length; i++) {
       if (file2[i].size > limitSize) {
