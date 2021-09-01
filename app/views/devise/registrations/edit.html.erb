@@ -27,7 +27,7 @@
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "email",placeholder: "email" %>
+    <%= f.email_field :email, autocomplete: "email",placeholder: "e-mail" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -36,7 +36,7 @@
 
   <div class="field">
     <%= f.label :password %> <i>(
-      変更の場合)</i>
+      変更する場合)</i><br>
     <% if @minimum_password_length %>
 
     <em><%= @minimum_password_length %>文字以上</em><br/>
@@ -50,8 +50,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(入力し更新して下さい)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password",placeholder: "現在のパスワードを入力し更新して下さい" %>
+    <%= f.label :current_password %> <i>(更新用)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password",placeholder: "現在のパスワードを入力して下さい" %>
   </div>
 
   <div class="actions">
@@ -62,7 +62,9 @@
   <h4 class="mt-3">アカウント削除</h4>
 
   <p>削除しますか？
-    <%= button_to "アカウント削除する", registration_path(resource_name), data: { confirm: "Are you sure? 本当に消去しますか？" }, method: :delete %>
+    <%= button_to "アカウント削除する", registration_path(resource_name), data: { confirm: "Are you sure? 本当に消去しますか？" }, method: :delete, class: "delete-user"
+      
+    end %>
   </p>
 </div>
 

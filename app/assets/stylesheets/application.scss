@@ -500,6 +500,13 @@ footer {
   color: #3c3c3c;
   background-color: #c8eae7;
 }
+.delete-user input[type="submit"]{
+  padding: 8px 65px;
+  border: none;
+  border-radius: 5px;
+  color: #3c3c3c;
+  background-color: #dddddd;
+}
 
 //attend 出席表 
 .card-header {
