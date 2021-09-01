@@ -351,7 +351,7 @@ footer {
   outline: none;
 }
 
-.login-wrapper .field input[type="submit"]{
+.login-wrapper input[type="submit"]{
   background-color: #50ABA2;
 }
 
@@ -398,6 +398,22 @@ footer {
 }
 #error_explanation li{
   color: rgb(243, 50, 50);
+}
+.signup-wrapper input[type="text"],
+.signup-wrapper .field input[type="email"],
+.signup-wrapper .field input[type="password"]{
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid #71b398;
+  border-radius: 0;
+}
+.signup-wrapper .field input[type="email"],
+.signup-wrapper .field input[type="password"]:hover{
+  outline: none;
+}
+
+.signup-wrapper input[type="submit"]{
+  background-color: #50ABA2;
 }
 
 // トップ画面の上部
