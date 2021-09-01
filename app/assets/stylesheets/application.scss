@@ -500,12 +500,9 @@ footer {
   color: #3c3c3c;
   background-color: #c8eae7;
 }
-.delete-user input[type="submit"]{
-  padding: 8px 65px;
-  border: none;
-  border-radius: 5px;
-  color: #3c3c3c;
-  background-color: #dddddd;
+
+input.delete-user {
+  background-color: #e8e217;
 }
 
 //attend 出席表 
@@ -778,7 +775,7 @@ footer {
 @media screen and (max-width: 400px){
   .sch-time{
     padding: 1px;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
