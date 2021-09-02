@@ -177,10 +177,10 @@ footer{
 // メッセージ投稿フォーム
 footer {
   position: fixed;
-  max-width: 1000px;
+  max-width: 1000px !important;
   width: 100%;
   bottom: 0;
-  padding: 128px;
+  padding: 5px !important;
   background-color: white;
 }
 
@@ -424,6 +424,7 @@ footer {
 
 .new-color input[type="color"]{
   width:70%;
+  margin-bottom: 3px;
   border: none;
   background-color: transparent;
 }
@@ -502,7 +503,7 @@ footer {
 }
 
 input.delete-user {
-  background-color: #e8e217;
+  background-color: #E8E8E7!important;
 }
 
 //attend 出席表 
