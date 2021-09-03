@@ -609,7 +609,11 @@ input.delete-user {
 .btn-color{
   color: white;
   background-color: darkblue;
-  
+}
+
+.btn-color a:hover{
+  opacity: 0.8;
+  text-decoration: none;
 }
 
 // 出席アニメーション
