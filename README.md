@@ -1,24 +1,20 @@
-# README
+# GYMAPP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### フィットネスジムで使えるアプリを作りました。
 
-Things you may want to cover:
+> **主な機能**
 
-* Ruby version
+  * 出席簿
+    *  出席回数のカウント
+    *  ジム内メンバーの出資状況の確認
+  * スケジュール
+    *  共有したいスケジュールを入力
+    *  詳細で何時何分まで設定可能
+  * ToDoタスク
+    *  やることをリスト化
+    *  達成率の表示
+  * チャット
+    *  ジム内全体のチャット
+    *  カラー付きで誰の投稿か分かりやすくする
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
