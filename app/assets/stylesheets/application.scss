@@ -88,10 +88,12 @@
 
 // フッター
 footer{
+  position: inherit!important;
   max-width: none !important;
   width: 100%;
   margin: 0 auto;
   padding: 0 !important;
+  background-color: transparent;
 }
 
 .footer-bottom{
