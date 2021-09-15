@@ -10,7 +10,7 @@ User.create(
   [
     {
     :user_name => "徳川家康", 
-    :email => "togawa@ieyasu", 
+    :email => "tokugawa@ieyasu", 
     :password => "ieyasu",
     :color => "#469108"
     },
@@ -78,61 +78,61 @@ User.create(
     :user_id => "1", 
     :content => "メインイベントでタイトルマッチ",
     :start_time => "2021-09-02 03:46:00"
-      },
-      {
+    },
+    {
     :title => "休館", 
     :user_id => "2", 
     :content => "メンテンスのため、この日はジム閉鎖します",
     :start_time => "2021-09-03 "
-      },
-      {
+    },
+    {
     :title => "出稽古", 
     :user_id => "3", 
     :content => "さいたまスーパーアリーナで試合です",
     :start_time => "2021-09-12 19:00:00"
-      },
-      {
+    },
+    {
     :title => "豊臣試合", 
     :user_id => "1", 
     :content => "東京ドームで試合です",
     :start_time => "2021-09-19 20:00:00"
-      },
-      {
+    },
+    {
     :title => "試合", 
     :user_id => "1", 
     :content => "後楽園ホールで試合です",
     :start_time => "2021-09-20 19:30:00"
-      },
-      {
+    },
+    {
     :title => "試合", 
     :user_id => "3", 
     :content => "東京ドームで試合です",
     :start_time => "2021-09-21 19:00:00"
-      },
-      {
+    },
+    {
     :title => "会議", 
     :user_id => "1", 
     :content => "東京ドームで試合です",
     :start_time => "2021-09-28 10:30:00"
-      },
-      {
+    },
+    {
     :title => "会議", 
     :user_id => "2", 
     :content => "東京ドームで試合です",
     :start_time => "2021-09-29 10:30:00"
-      },
-      {
+    },
+    {
     :title => "(仮)試合", 
     :user_id => "1", 
     :content => "まだ決定ではないですが、徳川の試合です",
     :start_time => "2021-09-07"
-      },
-      {
-      :title => "ジム休み", 
+    },
+    {
+    :title => "ジム休み", 
     :user_id => "2", 
     :content => "クリーニングのため、この日はジム閉鎖します",
     :start_time => "2021-09-05 03:46:00"
-      }
+    }
   ]
   )
   
@@ -141,43 +141,43 @@ User.create(
     {
     :user_id => "1",
     :content => "今日もよろしくお願いします"
-      },
-      {
+    },
+    {
     :user_id => "2",
     :content => "こちらこそ"
-      },
-      {
-      :user_id => "3",
+    },
+    {
+    :user_id => "3",
     :content => "ありがとうございます"
-      },
-      {
+    },
+    {
     :user_id => "4",
     :content => "こんにちは"
-      },
-      {
+    },
+    {
     :user_id => "5",
     :content => "頑張りましょう"
-      },
-      {
+    },
+    {
     :user_id => "6",
     :content => "おはようございます"
-      },
-      {
+    },
+    {
     :user_id => "7",
     :content => "天気がいいですね"
-      },
-      {
+    },
+    {
     :user_id => "8",
     :content => "スケジュール更新したので見てください"
-      },
-      {
+    },
+    {
     :user_id => "9",
     :content => "ありがとうございます"
-      },
-      {
+    },
+    {
     :user_id => "10",
     :content => "よろしくお願いします"
-      }
+    }
   
   ]
   )
