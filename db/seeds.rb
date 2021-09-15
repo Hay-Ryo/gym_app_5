@@ -10,49 +10,49 @@ User.create(
   [
     {
     :user_name => "徳川家康", 
-    :email => "to@ku", 
+    :email => "togawa@ieyasu", 
     :password => "ieyasu",
     :color => "#469108"
     },
     {
     :user_name => "織田信長", 
-    :email => "o@da", 
+    :email => "oda@nobunaga", 
     :password => "nobunaga",
     :color => "#8a088c"
     },
     {
     :user_name => "豊臣秀吉", 
-    :email => "to@yo", 
+    :email => "toyotomi@hideyoshi", 
     :password => "hideyoshi",
     :color => "#d0ca0b"
     },
     {
     :user_name => "伊達政宗", 
-    :email => "da@te", 
+    :email => "date@masamune", 
     :password => "masamune",
     :color => "#8a8a8a"
     },
     {
     :user_name => "毛利元就", 
-    :email => "moori@motonari", 
+    :email => "mohri@motonari", 
     :password => "motonari",
-    :color => "#8a8a8a"
+    :color => "#b7811e"
     },
     {
     :user_name => "前田利家", 
-    :email => "da@te", 
-    :password => "masamune",
-    :color => "#8a8a8a"
+    :email => "maeda@toshiie", 
+    :password => "toshiie",
+    :color => "#a29a35"
     },
     {
     :user_name => "真田幸村", 
     :email => "sanada@yukimura", 
     :password => "yukimura",
-    :color => "#8a8a8a"
+    :color => "#e41f56"
     },
     {
     :user_name => "武田信玄", 
-    :email => "ta@ke", 
+    :email => "takeda@shingen", 
     :password => "shingen",
     :color => "#d93063"
     },
@@ -60,13 +60,13 @@ User.create(
     :user_name => "上杉謙信", 
     :email => "uesugi@kenshin", 
     :password => "kenshin",
-    :color => "#8a8a8a"
+    :color => "#6e75d2"
     },
     {
     :user_name => "直江兼続", 
     :email => "naoe@kanetsugu", 
     :password => "kanetsugu",
-    :color => "#8a8a8a"
+    :color => "#b9a9a9"
     }
   ]
   )
@@ -83,43 +83,43 @@ User.create(
     :title => "休館", 
     :user_id => "2", 
     :content => "メンテンスのため、この日はジム閉鎖します",
-    :start_time => "2021-09-03"
+    :start_time => "2021-09-03 "
       },
       {
     :title => "出稽古", 
     :user_id => "3", 
     :content => "さいたまスーパーアリーナで試合です",
-    :start_time => "2021-09-12"
+    :start_time => "2021-09-12 19:00:00"
       },
       {
-    :title => "豊臣", 
+    :title => "豊臣試合", 
     :user_id => "1", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-09-19"
+    :start_time => "2021-09-19 20:00:00"
       },
       {
     :title => "試合", 
     :user_id => "1", 
     :content => "後楽園ホールで試合です",
-    :start_time => "2021-09-20"
+    :start_time => "2021-09-20 19:30:00"
       },
       {
     :title => "試合", 
     :user_id => "3", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-09-21"
+    :start_time => "2021-09-21 19:00:00"
       },
       {
     :title => "会議", 
     :user_id => "1", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-09-28"
+    :start_time => "2021-09-28 10:30:00"
       },
       {
     :title => "会議", 
     :user_id => "2", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-09-29"
+    :start_time => "2021-09-29 10:30:00"
       },
       {
     :title => "(仮)試合", 
