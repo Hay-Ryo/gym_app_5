@@ -778,6 +778,19 @@ input.delete-user {
   padding: 8px;
 }
 
+@media screen and (min-width: 1025px){
+.schedule-wrapper {
+  max-width: 1350px;
+}
+.schedule-pc{
+display: flex;
+}
+.sch-display {
+  width: 30%;
+  margin-top: 46px;
+}
+}
+
 // スマホ画面の表示
 @media screen and (max-width: 400px){
   .sch-time{

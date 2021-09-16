@@ -63,7 +63,7 @@
 
 <% @users.each do |user| %>
 <% if user.user_name==nil %>
-  <div class="users-index-item shadow p-3 mb-1 bg-light rounded">
+  <div class="users-index-item shadow p-3 mb-1 bg-light rounded" style="color:<%=user.color%>">
     <p><%= user.id%>.<%= user.user_name%><a>NO NAME</a></p>
   </div>
 <%else%>

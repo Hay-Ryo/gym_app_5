@@ -4,24 +4,26 @@
       スケジュール作成
     </button>
   </div>
-  <%= month_calendar events: @schedules do |date,schedules| %>
-  <%= date.day %>
-  <% schedules.each do |schedule| %>
-  <div class="schedule-title">
-    <%= link_to schedule.title.slice(0..3),"/schedules/#{schedule.id}" %>
-  </div>
-  <% end %>
-  <% end %>
-  <div class="sch-display">
-    <div id="schedule_list">
-      <%= render 'index'%>
-    </div>
 
-    <div class="schedule-more">
-      <%= link_to_next_page @schedules_show, 'もっと見る', remote: true, id: 'display_more' %>
+  <div class="schedule-pc">
+    <%= month_calendar events: @schedules do |date,schedules| %>
+    <%= date.day %>
+    <% schedules.each do |schedule| %>
+    <div class="schedule-title">
+      <%= link_to schedule.title.slice(0..3),"/schedules/#{schedule.id}" %>
+    </div>
+    <% end %>
+    <% end %>
+    <div class="sch-display">
+      <div id="schedule_list">
+        <%= render 'index'%>
+      </div>
+      <div class="schedule-more">
+        <%= link_to_next_page @schedules_show, 'もっと見る', remote: true, id: 'display_more' %>
+      </div>
     </div>
   </div>
-  
+
 </div>
 
 <%= render 'modal' %>
