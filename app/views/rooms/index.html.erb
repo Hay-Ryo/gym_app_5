@@ -48,32 +48,17 @@
 <% if @user.id == 1 %>
 <% @users.each do |user| %>
 <% if user.user_name==nil %>
-  <div class="users-list shadow p-3 mb-1 mt-1 bg-light rounded" style="background-color:<%=user.color%>">
+  <div class="users-list shadow" style="background-color:<%=user.color%>">
     <p><%= user.id%>.<%= user.user_name%><a>NO NAME</a></p>
     <p><%= user.email%></p>
   </div>
 <%else%>
-  <div class="users-list shadow p-3 mb-1 mt-1 bg-light rounded" style="background-color:<%=user.color%>">
+  <div class="users-list shadow" style="background-color:<%=user.color%>">
     <p><%= user.id%>.<%= user.user_name%></p>
     <p><%= user.email%></p>
   </div>
 <%end%>
 <%end%>
-
-<%else%>
-
-<% @users.each do |user| %>
-<% if user.user_name==nil %>
-  <div class="users-index-item shadow p-3 mb-1 bg-light rounded" style="background-color:<%=user.color%>">
-    <p><%= user.id%>.<%= user.user_name%><a>NO NAME</a></p>
-  </div>
-<%else%>
-  <div class="users-index-item shadow p-3 mb-1 bg-light rounded" style="background-color:<%=user.color%>">
-    <p><%= user.id%>.<%= user.user_name%></p>
-  </div>
-<%end%>
-<%end%>
-
 <%end%>
 
 <script>

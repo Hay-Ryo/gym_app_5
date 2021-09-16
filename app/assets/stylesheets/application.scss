@@ -454,8 +454,12 @@ footer {
   max-width: 1000px;
   width: 90%;
   display: table;
-  margin: 0 auto;
+  margin: 5px auto;
+  padding: 12px;
   overflow: hidden;
+  font-weight: bold;
+  border-radius: 10px;
+
 }
 
 // トップ画面とユーザー編集の写真部分
