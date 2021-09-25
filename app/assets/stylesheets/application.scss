@@ -399,7 +399,7 @@ footer {
 
 #error_explanation{
   width: 90%;
-  margin: 10px;
+  margin: 20px;
   text-align: center;
   font-size: small;
 }
@@ -422,6 +422,7 @@ footer {
 
 .signup-wrapper input[type="submit"]{
   background-color: #50ABA2;
+  border: none;
 }
 
 .new-color input[type="color"]{
@@ -501,11 +502,13 @@ footer {
 }
 
 .edit-wrapper input[type="submit"]{
-  padding: 8px 65px;
+  width: 50%;
+  padding: 10px 0;
   border: none;
   border-radius: 5px;
   color: #3c3c3c;
   background-color: #c8eae7;
+  font-weight: bold;
 }
 
 input.delete-user {
