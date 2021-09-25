@@ -786,11 +786,12 @@ input.delete-user {
 .schedule-wrapper {
   max-width: 1350px;
 }
-.schedule-pc{
-  display: flex;
-}
+
 .simple-calendar{
-  width: 70%;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
 }
 .sch-display {
   width: 30%;
