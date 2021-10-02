@@ -7,11 +7,25 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+before_action :basic_auth, if: :production? 
+protect_from_forgery with: :exception
 
 server '54.150.227.254', user: 'ec2-user', roles: %w{app db web}
 
 set :rails_env, "production"
 set :unicorn_rack_env, "production"
+
+private
+
+  def production?   #追加部分〜
+    Rails.env.production?
+  end   #〜追加部分
+
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
+    end
+  end
 
 # role-based syntax
 # ==================
