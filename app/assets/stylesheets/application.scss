@@ -20,7 +20,7 @@
 
 // ヘッダー
 .sticky-top{
-  max-width: 1000px;
+  max-width: 2000px;
   margin: 0 auto;
   background-color: #50ABA2;
 }
@@ -106,7 +106,7 @@
 }
 // フラッシュメッセージ
 .alert-success{
-  max-width: 1000px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .alert-secondary{
-  max-width: 1000px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -325,7 +325,7 @@ footer {
 
 // ログイン画面
 .login-wrapper{
-  max-width: 1000px;
+  max-width: 2000px;
   width: 90%;
   margin: 10px auto;
   padding: 20px 30px;
@@ -335,6 +335,10 @@ footer {
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
   z-index: 10000;
+}
+
+.login-wrapper h2{
+  font-weight: bold;
 }
 
 .login-wrapper.field > label{
@@ -355,11 +359,13 @@ footer {
 }
 
 .login-wrapper input[type="submit"]{
-  padding: 8px 65px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
-  color: #3c3c3c;
+  font-weight: bold;
+  color: #545454;
   background-color: #c8eae7;
+    
 }
 
 .login-checkbox input[type="checkbox"]{
@@ -493,6 +499,10 @@ footer {
 
 .edit-wrapper .field input{
   width:90%;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 2px solid #71b398;
+
 }
 
 .edit-wrapper input[type="color"] {
@@ -503,12 +513,13 @@ footer {
 
 .edit-wrapper input[type="submit"]{
   width: 50%;
+  margin: 10px;
   padding: 10px 0;
   border: none;
   border-radius: 5px;
-  color: #3c3c3c;
-  background-color: #c8eae7;
   font-weight: bold;
+  color: #545454;
+  background-color: #c8eae7;
 }
 
 input.delete-user {
