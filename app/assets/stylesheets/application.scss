@@ -946,6 +946,27 @@ input.delete-user {
   border-radius: 50%;
 }
 
+.btn-position::before {
+  content: "";
+  position: absolute;
+  top: 22%;
+  left: 42%;
+  width: 10px;
+  height: 36px;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(90deg);
+}
+
+.btn-position::after {
+  content: "";
+  position: absolute;
+  top: 22%;
+  left: 42%;
+  width: 10px;
+  height: 36px;
+  background-color: rgb(255, 255, 255);
+}
+
 .btn-sm, .btn-group-sm > .btn {
   padding: 8px 13px;
 }

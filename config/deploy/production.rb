@@ -7,9 +7,6 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-before_action :basic_auth, if: :production? 
-protect_from_forgery with: :exception
-
 server '54.150.227.254', user: 'ec2-user', roles: %w{app db web}
 
 set :rails_env, "production"
