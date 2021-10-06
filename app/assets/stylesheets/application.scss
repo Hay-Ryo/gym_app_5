@@ -968,14 +968,15 @@ input.delete-user {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 8px 13px;
+  padding: 10px 10px;
+  border-radius: 50%;
 }
 
 // 大きい画面の表示
 @media screen and (min-width: 900px){
   .btn-position{
-    right: calc(50% - 435px);
-    bottom: 4%;
+    right: calc(50% - 550px);
+    bottom: 3%;
   }
   .task-container{
     margin-bottom: 0px;
