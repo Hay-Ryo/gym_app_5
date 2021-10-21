@@ -187,52 +187,52 @@ User.create(
     {
     :user_name => "徳川家康",
     :user_id => "1",
-    :start_time => "2021-10-05 11:46:00"
+    :created_at => "2021-10-05 11:46:00"
     },
     {
     :user_name => "織田信長",
     :user_id => "2",
-    :start_time => "2021-10-05 19:19:00"
+    :created_at => "2021-10-05 19:19:00"
     },
     {
-    :user_name => "豊臣秀吉"
+    :user_name => "豊臣秀吉",
     :user_id => "3",
-    :start_time => "2021-10-05 19:48:00"
+    :created_at => "2021-10-05 19:48:00"
     },
     {
-    :user_name => "豊臣秀吉"
+    :user_name => "豊臣秀吉",
     :user_id => "3",
-    :start_time => "2021-10-06 11:46:00"
+    :created_at => "2021-10-06 11:46:00"
     },
     {
     :user_name => "徳川家康",
     :user_id => "1",
-    :start_time => "2021-10-07 21:00:00"
+    :created_at => "2021-10-07 21:00:00"
     },
     {
     :user_name => "徳川家康",
     :user_id => "1",
-    :start_time => "2021-10-08 17:00:00"
+    :created_at => "2021-10-08 17:00:00"
     },
     {
     :user_name => "徳川家康",
     :user_id => "1",
-    :start_time => "2021-10-09 18:46:00"
+    :created_at => "2021-10-09 18:46:00"
     },
     {
     :user_name => "織田信長",
     :user_id => "2",
-    :start_time => "2021-10-10 19:00:00"
+    :created_at => "2021-10-10 19:00:00"
     },
     {
     :user_name => "織田信長",
     :user_id => "2",
-    :start_time => "2021-10-19 19:30:00"
+    :created_at => "2021-10-19 19:30:00"
     },
     {
     :user_name => "上杉謙信", 
     :user_id => "9",
-    :start_time => "2021-10-30 20:00:00"
+    :created_at => "2021-10-30 20:00:00"
     }
   ]
   )
