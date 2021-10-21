@@ -190,9 +190,32 @@ User.create(
     :start_time => "2021-10-05 11:46:00"
     },
     {
+    :user_id => "1",
+    :user_name => "徳川家康",
+    :start_time => "2021-10-06 11:46:00"
+    },
+    {
+    :user_id => "1",
+    :user_name => "徳川家康",
+    :start_time => "2021-10-07 11:46:00"
+    },
+    {
+    :user_id => "1",
+    :user_name => "徳川家康",
+    :start_time => "2021-10-08 11:46:00"
+    },{
+    :user_id => "1",
+    :user_name => "徳川家康",
+    :start_time => "2021-10-09 11:46:00"
+    },{
+    :user_id => "1",
+    :user_name => "徳川家康",
+    :start_time => "2021-10-11 11:46:00"
+    },
+    {
     :user_id => "2",
     :user_name => "織田信長",
-    :start_time => "2021-10-05 19:19:00"
+    :start_time => "2021-10-13 19:19:00"
     },
     {
     :user_name => "豊臣秀吉",
@@ -205,29 +228,54 @@ User.create(
     :start_time => "2021-10-06 11:46:00"
     },
     {
-    :user_name => "徳川家康",
-    :user_id => "1",
+    :user_name => "豊臣秀吉",
+    :user_id => "3",
     :start_time => "2021-10-07 21:00:00"
     },
     {
-    :user_name => "徳川家康",
-    :user_id => "1",
+    :user_name => "豊臣秀吉",
+    :user_id => "3",
     :start_time => "2021-10-08 17:00:00"
     },
     {
-    :user_name => "徳川家康",
-    :user_id => "1",
-    :start_time => "2021-10-09 18:46:00"
+    :user_name => "真田幸村",
+    :user_id => "7",
+    :start_time => "2021-10-08 17:00:00"
     },
     {
-    :user_name => "織田信長",
-    :user_id => "2",
-    :start_time => "2021-10-10 19:00:00"
+    :user_name => "真田幸村",
+    :user_id => "7",
+    :start_time => "2021-10-10 17:00:00"
     },
     {
-    :user_name => "織田信長",
-    :user_id => "2",
-    :start_time => "2021-10-19 19:30:00"
+    :user_name => "真田幸村",
+    :user_id => "7",
+    :start_time => "2021-10-15 17:00:00"
+    },
+    {
+    :user_name => "真田幸村",
+    :user_id => "7",
+    :start_time => "2021-10-23 17:00:00"
+    },
+    {
+    :user_name => "真田幸村",
+    :user_id => "7",
+    :start_time => "2021-10-25 17:00:00"
+    },
+    {
+    :user_name => "上杉謙信",
+    :user_id => "9",
+    :start_time => "2021-10-21 18:46:00"
+    },
+    {
+    :user_name => "上杉謙信",
+    :user_id => "9",
+    :start_time => "2021-10-23 19:00:00"
+    },
+    {
+    :user_name => "上杉謙信",
+    :user_id => "9",
+    :start_time => "2021-10-28 19:30:00"
     },
     {
     :user_name => "上杉謙信", 
