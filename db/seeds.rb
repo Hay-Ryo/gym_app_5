@@ -185,14 +185,14 @@ User.create(
   Attend.create(
   [
     {
-    :user_name => "徳川家康",
     :user_id => "1",
-    :created_at => "2021-10-05 11:46:00"
+    :user_name => "徳川家康",
+    :start_time => "2021-10-05 11:46:00"
     },
     {
-    :user_name => "織田信長",
     :user_id => "2",
-    :created_at => "2021-10-05 19:19:00"
+    :user_name => "織田信長",
+    :start_time => "2021-10-05 19:19:00"
     },
     {
     :user_name => "豊臣秀吉",
