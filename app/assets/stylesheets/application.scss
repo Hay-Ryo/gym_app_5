@@ -703,8 +703,18 @@ input.delete-user {
   background-color: #505050;
 }
 
+.attend-calendar{
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: 0px 1px 3px #c1ced7;
+}
+
 .attend-detail{
-  max-width: 1000px;
+  // max-width: 1000px;
   margin: 0 auto;
   padding-top: 8px;
   padding-bottom: 16px;
@@ -797,7 +807,7 @@ input.delete-user {
 .schedule-pc{
   display: flex;
 }
-.simple-calendar{
+.schedule-wrapper >.simple-calendar{
   width: 70%;
 }
 .sch-display {
