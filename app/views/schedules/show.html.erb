@@ -29,9 +29,9 @@
                 <%if @schedule.user.id==current_user.id %>
                 <div class="schedule-btn">
                     <button type="button"
-                        class="btn btn-warning btn-sm mt-1"><%= link_to("編集",edit_schedule_path)%></button>
+                        class="btn sch-btn btn-sm mt-1"><%= link_to("編集",edit_schedule_path)%></button>
                     <button type="button"
-                        class="btn btn-secondary  btn-sm mt-1"><%= link_to("削除",schedule_path, method: "delete", data: { confirm: "このスケジュールを削除しますか？"} )%></button>
+                        class="btn sch-del btn-sm mt-1"><%= link_to("削除",schedule_path, method: "delete", data: { confirm: "このスケジュールを削除しますか？"} )%></button>
                 </div>
                 <%else%>
                 <div class="schedule-btn">
