@@ -77,61 +77,61 @@ User.create(
     :title => "織田試合", 
     :user_id => "1", 
     :content => "メインイベントでタイトルマッチ",
-    :start_time => "2021-10-02 03:46:00"
+    :start_time => "2021-12-02 03:46:00"
     },
     {
     :title => "休館", 
     :user_id => "2", 
     :content => "メンテンスのため、この日はジム閉鎖します",
-    :start_time => "2021-10-03 "
+    :start_time => "2021-12-03 "
     },
     {
     :title => "出稽古", 
     :user_id => "3", 
     :content => "さいたまスーパーアリーナで試合です",
-    :start_time => "2021-10-12 19:00:00"
+    :start_time => "2021-12-12 19:00:00"
     },
     {
     :title => "豊臣試合", 
     :user_id => "1", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-10-19 20:00:00"
+    :start_time => "2021-12-19 20:00:00"
     },
     {
     :title => "試合", 
     :user_id => "1", 
     :content => "後楽園ホールで試合です",
-    :start_time => "2021-10-20 19:30:00"
+    :start_time => "2021-12-20 19:30:00"
     },
     {
     :title => "試合", 
     :user_id => "3", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-10-21 19:00:00"
+    :start_time => "2021-12-31 19:00:00"
     },
     {
     :title => "会議", 
     :user_id => "1", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-10-28 10:30:00"
+    :start_time => "2021-12-28 10:30:00"
     },
     {
     :title => "会議", 
     :user_id => "2", 
     :content => "東京ドームで試合です",
-    :start_time => "2021-10-29 10:30:00"
+    :start_time => "2021-12-29 10:30:00"
     },
     {
     :title => "(仮)試合", 
     :user_id => "1", 
     :content => "まだ決定ではないですが、徳川の試合です",
-    :start_time => "2021-10-07"
+    :start_time => "2021-12-07"
     },
     {
     :title => "ジム休み", 
     :user_id => "2", 
-    :content => "クリーニングのため、この日はジム閉鎖します",
-    :start_time => "2021-10-05 03:46:00"
+    :content => "クリーニングのためお休みです",
+    :start_time => "2021-12-05 03:46:00"
     }
   ]
   )
@@ -187,100 +187,100 @@ User.create(
     {
     :user_id => "1",
     :user_name => "徳川家康",
-    :start_time => "2021-10-05 11:46:00"
+    :start_time => "2021-12-05 11:46:00"
     },
     {
     :user_id => "1",
     :user_name => "徳川家康",
-    :start_time => "2021-10-06 11:46:00"
+    :start_time => "2021-12-06 11:46:00"
     },
     {
     :user_id => "1",
     :user_name => "徳川家康",
-    :start_time => "2021-10-07 11:46:00"
+    :start_time => "2021-12-07 11:46:00"
     },
     {
     :user_id => "1",
     :user_name => "徳川家康",
-    :start_time => "2021-10-08 11:46:00"
+    :start_time => "2021-12-08 11:46:00"
     },{
     :user_id => "1",
     :user_name => "徳川家康",
-    :start_time => "2021-10-09 11:46:00"
+    :start_time => "2021-12-09 11:46:00"
     },{
     :user_id => "1",
     :user_name => "徳川家康",
-    :start_time => "2021-10-11 11:46:00"
+    :start_time => "2021-12-11 11:46:00"
     },
     {
     :user_id => "2",
     :user_name => "織田信長",
-    :start_time => "2021-10-13 19:19:00"
+    :start_time => "2021-12-13 19:19:00"
     },
     {
     :user_name => "豊臣秀吉",
     :user_id => "3",
-    :start_time => "2021-10-05 19:48:00"
+    :start_time => "2021-12-05 19:48:00"
     },
     {
     :user_name => "豊臣秀吉",
     :user_id => "3",
-    :start_time => "2021-10-06 11:46:00"
+    :start_time => "2021-12-06 11:46:00"
     },
     {
     :user_name => "豊臣秀吉",
     :user_id => "3",
-    :start_time => "2021-10-07 21:00:00"
+    :start_time => "2021-12-07 21:00:00"
     },
     {
     :user_name => "豊臣秀吉",
     :user_id => "3",
-    :start_time => "2021-10-08 17:00:00"
+    :start_time => "2021-12-08 17:00:00"
     },
     {
     :user_name => "真田幸村",
     :user_id => "7",
-    :start_time => "2021-10-08 17:00:00"
+    :start_time => "2021-12-08 17:00:00"
     },
     {
     :user_name => "真田幸村",
     :user_id => "7",
-    :start_time => "2021-10-10 17:00:00"
+    :start_time => "2021-12-10 17:00:00"
     },
     {
     :user_name => "真田幸村",
     :user_id => "7",
-    :start_time => "2021-10-15 17:00:00"
+    :start_time => "2021-12-15 17:00:00"
     },
     {
     :user_name => "真田幸村",
     :user_id => "7",
-    :start_time => "2021-10-23 17:00:00"
+    :start_time => "2021-12-23 17:00:00"
     },
     {
     :user_name => "真田幸村",
     :user_id => "7",
-    :start_time => "2021-10-25 17:00:00"
+    :start_time => "2021-12-25 17:00:00"
     },
     {
     :user_name => "上杉謙信",
     :user_id => "9",
-    :start_time => "2021-10-21 18:46:00"
+    :start_time => "2021-12-21 18:46:00"
     },
     {
     :user_name => "上杉謙信",
     :user_id => "9",
-    :start_time => "2021-10-23 19:00:00"
+    :start_time => "2021-12-23 19:00:00"
     },
     {
     :user_name => "上杉謙信",
     :user_id => "9",
-    :start_time => "2021-10-28 19:30:00"
+    :start_time => "2021-12-28 19:30:00"
     },
     {
     :user_name => "上杉謙信", 
     :user_id => "9",
-    :start_time => "2021-10-30 20:00:00"
+    :start_time => "2021-12-30 20:00:00"
     }
   ]
   )
