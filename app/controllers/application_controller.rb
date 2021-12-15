@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+# Basic認証
+  # before_action :basic_auth, if: :production? 
 
-  before_action :basic_auth, if: :production? 
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
@@ -28,16 +29,17 @@ protected
     devise_parameter_sanitizer.permit(:account_update, keys: [:user_name, :color, :img])
   end
 
+# Basic認証
   private
 
-  def production?
-    Rails.env.production?
-  end
+  # def production?
+  #   Rails.env.production?
+  # end
 
-  def basic_auth
-    authenticate_or_request_with_http_basic do |username, password|
-      username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
-    end
-  end
+  # def basic_auth
+  #   authenticate_or_request_with_http_basic do |username, password|
+  #     username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
+  #   end
+  # end
 
 end
