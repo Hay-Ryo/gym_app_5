@@ -39,8 +39,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-<<<<<<< HEAD
-db/seeds.rb
-=======
+
 /db/seeds.rb
->>>>>>> cc70502c6210569011f58958a18e485853173985
