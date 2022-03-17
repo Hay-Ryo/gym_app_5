@@ -1,6 +1,8 @@
-<%= image_tag asset_path("IMG_7626.jpg"), id: "top_img", class: "top-def" %>
 
 <div class="login-wrapper">
+
+  <%= image_tag asset_path("IMG_7626.jpg"), id: "top_img", class: "top-def" %>
+
   <h2>GYM APP</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -25,6 +27,11 @@
     <%= f.submit "ログイン" %>
   </div>
   <% end %>
+
+  <p>アドレス[tokugawa@ieyasu]</p>
+  <p>パスワード[ieyasu]</p>
+  <p>こちらでもログインできます。</p>
+
 </div>
 
 <div class="login-footer">
@@ -32,7 +39,7 @@
 </div>
 
   <address class="footer-bottom">© 2021 GYMAPPTOKYO. All rights reserved.</address>
-  
+
 <%# トップ画面のアニメーション %>
 <%# <script>
   window.setTimeout(() => {
