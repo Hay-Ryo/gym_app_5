@@ -1099,14 +1099,14 @@ input.delete-user {
   transition:1.0s;
   z-index: -1;
 }
-
-.top-def{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  height: 0.1;
-  opacity: 1;
-  overflow: hidden;
-  z-index: 10000;
-}
+// トップ画面のアニメーション
+// .top-def{
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   height: 0.1;
+//   opacity: 1;
+//   overflow: hidden;
+//   z-index: 10000;
+// }
