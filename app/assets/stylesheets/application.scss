@@ -30,6 +30,10 @@
   border-color: rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 255, 255, 0.411);
 }
+// フッター
+address.footer-bottom {
+  margin: 0;
+}
 
 .home{
   margin-right: 16px;
@@ -175,7 +179,7 @@ footer {
   width: 100%;
   bottom: 0;
   padding: 5px !important;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .dropdown-menu{
@@ -330,7 +334,9 @@ footer {
 }
 
 .login-wrapper h2{
+  color: #476F5F;
   font-weight: bold;
+  font-style: italic;
 }
 
 .login-wrapper.field > label{
@@ -356,8 +362,8 @@ footer {
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  color: #545454;
-  background-color: #c8eae7;
+  color: #ffffff;
+  background-color: #71b398;
     
 }
 
@@ -393,7 +399,7 @@ footer {
   margin: 10px;
   text-align: center;
   border-radius: 10px;
-  color :white;
+  color :#ffffff;
 }
 
 #error_explanation{
@@ -420,7 +426,7 @@ footer {
 }
 
 .signup-wrapper input[type="submit"]{
-  background-color: #50ABA2;
+  background-color:#71b398;
   border: none;
 }
 
@@ -441,7 +447,7 @@ footer {
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 0 2px 6px #c1ced7;
 }
 
@@ -512,7 +518,7 @@ footer {
   border-radius: 5px;
   font-weight: bold;
   color: #545454;
-  background-color: #c8eae7;
+  background-color: #71b398;
 }
 
 input.delete-user {
@@ -1086,7 +1092,7 @@ input.delete-user {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.1;
+  opacity: 0.5;
   overflow: hidden;
   transition:1.0s;
   z-index: -1;
