@@ -1090,10 +1090,10 @@ input.delete-user {
 
 // サイトアクセス時のトップ画面
 img#top_img {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  height: 125vh;
+  height: 100vh;
   z-index: -1;
   opacity: 0.3;
 }
