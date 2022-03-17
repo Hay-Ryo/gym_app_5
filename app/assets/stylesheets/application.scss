@@ -321,8 +321,9 @@ footer {
 
 // ログイン画面
 .login-wrapper{
-  max-width: 2000px;
-  width: 90%;
+  max-width: 800px;
+  min-width: 330px;
+  width: 55%;
   margin: 10px auto;
   padding: 20px 30px;
   border-radius: 10px;
@@ -379,8 +380,9 @@ footer {
 
 // 新規登録
 .signup-wrapper{
-  max-width: 1000px;
-  width: 90%;
+  max-width: 800px;
+  min-width: 330px;
+  width: 55%;
   margin: 10px auto;
   padding: 20px 30px;
   border-radius: 10px;
