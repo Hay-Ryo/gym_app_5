@@ -14,6 +14,8 @@
 
   <body>
   
+    <%= image_tag asset_path("IMG_7626.jpg"), id: "top_img", class: "top-def" %>
+
     <%= render 'rooms/header' %>
     <% if flash[:notice] %>
       <div class="flash alert alert-success">

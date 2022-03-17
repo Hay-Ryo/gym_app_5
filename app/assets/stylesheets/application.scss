@@ -1089,16 +1089,29 @@ input.delete-user {
 }
 
 // サイトアクセス時のトップ画面
-.top-img{
-  position: fixed;
+img#top_img {
+  position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  overflow: hidden;
-  transition:1.0s;
+  height: 125vh;
   z-index: -1;
+  opacity: 0.3;
 }
+
+.login-wrapper p{
+  margin-top: 1rem;
+}
+
+// .top-img{
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   opacity: 0.5;
+//   overflow: hidden;
+//   transition:1.0s;
+//   z-index: -1;
+// }
 // トップ画面のアニメーション
 // .top-def{
 //   position: fixed;
